@@ -1,0 +1,81 @@
+! urxvt*termName: rxvt-unicode-256color
+Xfg.dpi: 100
+urxvt*matcher.button: 1
+
+! Fix Clipboard
+URxvt.perl-ext-common: ...,clipboard
+
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+!URxvt.clipboard.copycmd: 
+
+! Theme
+! urxvt*font: xft:Terminus:size=9
+urxvt*font: xft:DejaVu Sans Mono:size=10
+urxvt*background: #1d2333
+urxvt*foreground: #d1c2af
+urxvt*scrollbar: false
+urxvt.transparent: false
+urxvt*allow_bold: true
+
+Xft*antialias: true
+Xft*hinting: full
+
+URxvt*geometry: 85x22
+URxvt*fading: 0
+URxvt*tintColor: #ffffff
+URxvt*scrollBar: false
+URxvt.internalBorder: 8
+
+/* ! black + red */
+urxvt*color0:      #171c29
+urxvt*color1:      #9d5c5d
+/* ! urxvt*color0:      #222222 */
+/* ! urxvt*color1:      #a88274 */
+
+/* ! ! green + yellow */
+urxvt*color2:      #6d9c5c
+urxvt*color3:      #9d9c5c
+/* ! urxvt*color2:      #74a87a */
+/* ! urxvt*color3:      #a4a874 */
+
+/* ! ! blue + purple */
+urxvt*color4:      #6f5c9d
+urxvt*color5:      #9d5c84
+/* ! urxvt*color4:      #7475a8 */
+/* ! urxvt*color5:      #a174a8 */
+
+/* ! ! cyan + white */
+urxvt*color6:      #5c8d9d
+urxvt*color7:      #d9d9d9
+/* ! urxvt*color6:      #74a6a8 */
+/* ! urxvt*color7:      #cccccc */
+
+/* ! ! bright-black + bright-red */
+urxvt*color8:      #394463
+urxvt*color9:      #b17b7b
+/* ! urxvt*color8:      #484848 */
+/* ! urxvt*color9:      #c5aca3 */
+
+/* ! ! bright-green + bright-yellow */
+urxvt*color10:     #89b17b
+urxvt*color11:     #b1b17b
+/* ! urxvt*color10:     #a3c5a7 */
+/* ! urxvt*color11:     #c3c5a3 */
+
+/* ! ! bright-blue + bright-purple */
+urxvt*color12:     #8b7bb1
+urxvt*color13:     #b17b9c
+/* ! urxvt*color12:     #a3a4c5 */
+/* ! urxvt*color13:     #c1a3c5 */
+
+/* ! ! bright-cyan + bright-white */
+urxvt*color14:     #7ba4b1
+urxvt*color15:     #f3f3f3
+/* ! urxvt*color14:     #a3c4c5 */
+/* ! urxvt*color15:     #f2f2f2 */
+/* !}}} */
