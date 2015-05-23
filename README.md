@@ -7,6 +7,7 @@ Dot/conf files for:
 - ncmpcpp
 - mpv
 - oh-my-zsh
-- openbox
-- tint2
 - compton
+- i3
+- openbox (most likely not updated anymore)
+- tint2 (most likely not updated anymore)
