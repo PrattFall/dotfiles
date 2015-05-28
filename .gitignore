@@ -6,4 +6,8 @@ userstyles/
 .vim/plugged/*
 .vim/backup/*
 .mpd/playlists/
+.mpd/mpd.db
+.mpd/mpd.log
+.mpd/mpd.pid
+.mpd/mpdstate
 .themes/
