@@ -43,10 +43,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -82,10 +82,10 @@ bindsym $mod+a focus parent
 
 ## Workspaces
 
-set $WS1 term
-set $WS2 www
-set $WS3 text
-set $WS4 dev
+set $WS1 dev
+set $WS2 term
+set $WS3 www
+set $WS4 text
 set $WS5 chat
 set $WS6 media
 set $WS7 misc
@@ -168,8 +168,8 @@ bar {
 
 for_window[title="gcolor2"] floating enable
 for_window[title="gcolor2"] border pixel 3
-for_window[title="thunar"] floating enable
-for_window[title="thunar"] border pixel 3
+for_window[title="File Manager"] floating enable
+for_window[title="File Manager"] border pixel 3
 for_window[title="mpv"] floating enable
 for_window[title="mpv"] border none
 
