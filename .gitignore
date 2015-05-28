@@ -1,0 +1,9 @@
+userstyles/
+.emacs
+.emacs.d/
+.vim/swap/*
+.vim/undo/*
+.vim/plugged/*
+.vim/backup/*
+.mpd/playlists/
+.themes/
