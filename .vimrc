@@ -26,7 +26,6 @@ set backspace=indent,eol,start
 set ignorecase smartcase
 set list
 set listchars=trail:#,tab:\|\ ,
-set ttymouse=xterm2
 set mouse=a
 set clipboard=unnamed
 
@@ -66,7 +65,8 @@ Plug 'honza/vim-snippets'
 " Syntax Plugins
 Plug 'scrooloose/syntastic'
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'jelera/vim-javascript-syntax', {'for' : 'javascript' }
+" Plug 'jelera/vim-javascript-syntax', {'for' : 'javascript' }
+Plug 'othree/yajs.vim', {'for' : 'javascript' }
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
 Plug 'fatih/vim-go'

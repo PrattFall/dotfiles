@@ -172,6 +172,8 @@ for_window[title="File Manager"] floating enable
 for_window[title="File Manager"] border pixel 3
 for_window[title="mpv"] floating enable
 for_window[title="mpv"] border none
+for_window[title="xfce4-notifyd"] floating enable
+for_window[title="xfce4-notifyd"] border pixel 3
 
 ## Styling
 
@@ -188,5 +190,9 @@ client.unfocused        #333d59 #333d59 #d1c2af #333d59
 client.urgent           #9d5c5d #9d5c84 #d1c2af #9d5c84
 
 ## Autostart
-exec_always feh --bg-max --no-fehbg ~/Pictures/Wallpapers/using/kyouko4.png
+exec_always feh --bg-max --no-fehbg ~/Pictures/Wallpapers/using/kokonoe2.png
 exec_always compton -b
+
+## Gaps?
+gaps inner 16
+gaps outer 0

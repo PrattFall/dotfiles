@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/ixovim/.dotfiles'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/ixovim/Dropbox/Projects/Personal/jsMahjong'
+let g:netrw_dirhist_2='/home/ixovim/Programs/personal-website/src/posts'
+let g:netrw_dirhist_3='/home/ixovim/Dropbox/Personal-Files/dotfiles/.themes/Ayano/gtk-2.0'
