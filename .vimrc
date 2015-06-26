@@ -54,7 +54,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-"Plug 'godlygeek/csapprox'
 
 " Snipmate stuff
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -65,12 +64,13 @@ Plug 'honza/vim-snippets'
 " Syntax Plugins
 Plug 'scrooloose/syntastic'
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-" Plug 'jelera/vim-javascript-syntax', {'for' : 'javascript' }
 Plug 'othree/yajs.vim', {'for' : 'javascript' }
+Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
 Plug 'fatih/vim-go'
 Plug 'StanAngeloff/php.vim'
+Plug 'zah/nim.vim'
 
 call plug#end()
 

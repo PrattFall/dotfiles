@@ -82,13 +82,16 @@ bindsym $mod+a focus parent
 
 ## Workspaces
 
-set $WS1 dev
-set $WS2 term
-set $WS3 www
-set $WS4 text
-set $WS5 chat
-set $WS6 media
-set $WS7 misc
+set $WS1 一
+set $WS2 二
+set $WS3 三
+set $WS4 四
+set $WS5 五
+set $WS6 六
+set $WS7 七
+set $WS8 八
+set $WS9 九
+set $WS0 十
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -98,9 +101,9 @@ bindsym $mod+4 workspace $WS4
 bindsym $mod+5 workspace $WS5
 bindsym $mod+6 workspace $WS6
 bindsym $mod+7 workspace $WS7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS0
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $WS1
@@ -110,9 +113,9 @@ bindsym $mod+Shift+4 move container to workspace $WS4
 bindsym $mod+Shift+5 move container to workspace $WS5
 bindsym $mod+Shift+6 move container to workspace $WS6
 bindsym $mod+Shift+7 move container to workspace $WS7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+8 move container to workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9
+bindsym $mod+Shift+0 move container to workspace $WS0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -170,8 +173,8 @@ for_window[title="gcolor2"] floating enable
 for_window[title="gcolor2"] border pixel 3
 for_window[title="File Manager"] floating enable
 for_window[title="File Manager"] border pixel 3
-for_window[title="mpv"] floating enable
-for_window[title="mpv"] border none
+for_window[title="mpv -"] floating enable
+for_window[title="mpv -"] border none
 for_window[title="xfce4-notifyd"] floating enable
 for_window[title="xfce4-notifyd"] border pixel 3
 
@@ -190,6 +193,7 @@ client.unfocused        #333d59 #333d59 #d1c2af #333d59
 client.urgent           #9d5c5d #9d5c84 #d1c2af #9d5c84
 
 ## Autostart
+exec_always /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec_always feh --bg-max --no-fehbg ~/Pictures/Wallpapers/using/kokonoe2.png
 exec_always compton -b
 

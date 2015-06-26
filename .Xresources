@@ -61,23 +61,3 @@ urxvt*color12:    #8b7bb1
 urxvt*color13:    #b17b9c
 urxvt*color14:    #7ba4b1
 urxvt*color15:    #f3f3f3
-
-/* ! Kyouko test */
-/* urxvt*background: #1f1f1f */
-/* urxvt*foreground: #eeeeee */
-/* urxvt*color0: #272727 */
-/* urxvt*color1: #71312b */
-/* urxvt*color2: #c88b62 */
-/* urxvt*color3: #1f4c73 */
-/* urxvt*color4: #9f4c49 */
-/* urxvt*color5: #f2d1ad */
-/* urxvt*color6: #3b81aa */
-/* urxvt*color7: #c8c8c8 */
-/* urxvt*color8: #4d4d4d */
-/* urxvt*color9: #a84940 */
-/* urxvt*color10: #dcb59b */
-/* urxvt*color11: #2f74af */
-/* urxvt*color12: #c07875 */
-/* urxvt*color13: #fcf6ef */
-/* urxvt*color14: #67a6ca */
-/* urxvt*color15: #eeeeee */
