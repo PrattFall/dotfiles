@@ -52,8 +52,11 @@ call plug#begin('~/.nvim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+
+" Neovim stuff
+Plug 'janko-m/vim-test'
+Plug 'benekastah/neomake'
 
 " Snipmate stuff
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -68,9 +71,7 @@ Plug 'othree/yajs.vim', {'for' : 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
-Plug 'fatih/vim-go'
 Plug 'StanAngeloff/php.vim'
-Plug 'zah/nim.vim'
 
 call plug#end()
 
