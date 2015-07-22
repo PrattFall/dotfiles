@@ -27,7 +27,7 @@ set ignorecase smartcase
 set list
 set listchars=trail:#,tab:\|\ ,
 set mouse=a
-set clipboard=unnamed
+" set clipboard=unnamed
 
 color kyouko
 
@@ -53,6 +53,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 " Neovim stuff
 Plug 'janko-m/vim-test'
@@ -65,7 +66,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Syntax Plugins
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'othree/yajs.vim', {'for' : 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -94,6 +95,9 @@ nnoremap <leader>gs :Gstatus<cr>
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
 set nofoldenable
+
+" emmet-vim
+let g:user_emmet_expandabbr_key = '<Tab>'
 
 " Because
 command W w
