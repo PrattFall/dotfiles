@@ -27,7 +27,9 @@ set ignorecase smartcase
 set list
 set listchars=trail:#,tab:\|\ ,
 set mouse=a
-" set clipboard=unnamed
+if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
+  set clipboard=unnamed
+endif
 
 color kyouko
 
@@ -73,6 +75,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
 Plug 'StanAngeloff/php.vim'
+Plug 'elixir-lang/vim-elixir'
 
 call plug#end()
 

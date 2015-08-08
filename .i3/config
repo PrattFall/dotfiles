@@ -198,5 +198,5 @@ exec_always feh --bg-max --no-fehbg ~/Pictures/Wallpapers/using/kokonoe2.png
 exec_always compton -b
 
 ## Gaps?
-gaps inner 16
+gaps inner 7
 gaps outer 0
