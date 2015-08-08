@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/ixovim/Dropbox/Projects/Personal/jsMahjong'
-let g:netrw_dirhist_2='/home/ixovim/Programs/personal-website/src/posts'
-let g:netrw_dirhist_3='/home/ixovim/Dropbox/Personal-Files/dotfiles/.themes/Ayano/gtk-2.0'
-let g:netrw_dirhist_4='/Users/Ixovim/Dropbox/Schoolwork/2015 Spring/Algorithms/semafori'
-let g:netrw_dirhist_5='/Users/Ixovim/Dropbox/Schoolwork/2015 Spring/Algorithms/vauvau'
-let g:netrw_dirhist_6='/Users/Ixovim/Dropbox/Schoolwork/2015 Spring/Algorithms/incognito'
-let g:netrw_dirhist_7='/usr/share/nginx/html'

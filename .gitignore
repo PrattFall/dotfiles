@@ -5,6 +5,7 @@ userstyles/
 .vim/undo/*
 .vim/plugged/*
 .vim/backup/*
+.vim/.netrwhist
 .mpd/playlists/
 .mpd/mpd.db
 .mpd/mpd.log
