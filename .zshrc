@@ -25,4 +25,5 @@ export EDITOR=nvim
 export SVN_EDITOR=nvim
 
 alias lg="ls -a | grep"
+alias ls="ls --color=auto"
 
