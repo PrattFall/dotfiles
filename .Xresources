@@ -61,39 +61,3 @@ urxvt*color12:    #8b7bb1
 urxvt*color13:    #b17b9c
 urxvt*color14:    #7ba4b1
 urxvt*color15:    #f3f3f3
-
-/* ! test theme */
-/* urxvt*background: #333333 */
-/* urxvt*foreground: #dddddd */
-/* ! black */
-/* urxvt*color0: #3b3b3b */
-/* ! red */
-/* urxvt*color1: #fb8e91 */
-/* ! green */
-/* urxvt*color2: #fbde8e */
-/* ! yellow */
-/* urxvt*color3: #d7fb8e */
-/* ! blue */
-/* urxvt*color4: #8eaefb */
-/* ! magenta */
-/* urxvt*color5: #a68efb */
-/* ! cyan */
-/* urxvt*color6: #dc8efb */
-/* ! white */
-/* urxvt*color7: #b7b7b7 */
-/* ! black-bright */
-/* urxvt*color8: #616161 */
-/* ! red-bright */
-/* urxvt*color9: #fed8d9 */
-/* ! green-bright */
-/* urxvt*color10: #fef4d8 */
-/* ! yellow-bright */
-/* urxvt*color11: #f1fed8 */
-/* ! blue-bright */
-/* urxvt*color12: #d8e3fe */
-/* ! magenta-bright */
-/* urxvt*color13: #e0d8fe */
-/* ! cyan-bright */
-/* urxvt*color14: #f3d8fe */
-/* ! white-bright */
-/* urxvt*color15: #dddddd */
