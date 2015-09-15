@@ -27,3 +27,4 @@ export SVN_EDITOR=nvim
 alias lg="ls -a | grep"
 alias ls="ls --color=auto"
 
+alias fehLarge="feh --auto-zoom --scale-down -g 1000x1000"
