@@ -9,6 +9,9 @@ zstyle :compinstall filename '/home/$username/.zshrc'
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
@@ -27,4 +30,5 @@ export SVN_EDITOR=nvim
 alias lg="ls -a | grep"
 alias ls="ls --color=auto"
 
-alias fehLarge="feh --auto-zoom --scale-down -g 1000x1000"
+alias fehl="feh --auto-zoom --scale-down -g 1000x1000 --image-bg black"
+alias fehlx="feh --auto-zoom --scale-down -g 1000x1000 --image-bg black --random"
