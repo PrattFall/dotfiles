@@ -1,5 +1,5 @@
 ! urxvt*termName: rxvt-unicode-256color
-Xfg.dpi: 100
+Xfg.dpi: 96
 urxvt*matcher.button: 1
 
 ! Fix Clipboard

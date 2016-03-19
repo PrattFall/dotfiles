@@ -12,3 +12,6 @@ userstyles/
 .mpd/mpd.pid
 .mpd/mpdstate
 .themes/
+.ncmpcpp
+.mpd
+.oh-my-zsh

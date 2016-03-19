@@ -1,0 +1,85 @@
+! urxvt*termName: rxvt-unicode-256color
+Xfg.dpi: 118
+urxvt*matcher.button: 1
+
+URxvt.perl-lib: /home/bean/.urxvt.d/perls/
+
+! Fix Clipboard
+URxvt.perl-ext-common: ...,clipboard
+
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! URL-Select
+URxvt.perl-ext-common: ...,url-select
+URxvt.keysym.M-u: perl:url-selct:select_next
+
+! Theme
+urxvt*font: xft:Inconsolata\\-g:pixelsize=14:autohint=true
+urxvt*boldFont: xft:Inconsolata\\-g:pixelsize=14:autohint=true
+urxvt*scrollbar: false
+urxvt.transparent: false
+urxvt*allow_bold: true
+
+Xft*antialias: true
+Xft*hinting: full
+
+URxvt*geometry: 85x22
+URxvt*fading: 0
+URxvt*tintColor: #ffffff
+URxvt*scrollBar: false
+URxvt.internalBorder: 8
+! Reminder - Normal color order is as follows:
+! 0 Black
+! 1 Red
+! 2 Green
+! 3 Yellow
+! 4 Blue
+! 5 Magenta
+! 6 Cyan 
+! 7 White
+! Then Repeat
+
+! Ayano Theme
+/* urxvt*background: #1d2333 */
+/* urxvt*foreground: #d1c2af */
+
+/* urxvt*color0:     #171c29 */
+/* urxvt*color1:     #9d5c5d */
+/* urxvt*color2:     #6d9c5c */
+/* urxvt*color3:     #9d9c5c */
+/* urxvt*color4:     #6f5c9d */
+/* urxvt*color5:     #9d5c84 */
+/* urxvt*color6:     #5c8d9d */
+/* urxvt*color7:     #d9d9d9 */
+/* urxvt*color8:     #394463 */
+/* urxvt*color9:     #b17b7b */
+/* urxvt*color10:    #89b17b */
+/* urxvt*color11:    #b1b17b */
+/* urxvt*color12:    #8b7bb1 */
+/* urxvt*color13:    #b17b9c */
+/* urxvt*color14:    #7ba4b1 */
+/* urxvt*color15:    #f3f3f3 */
+
+!yui theme
+urxvt*background: #f5f5f5
+urxvt*foreground: #6a6731
+
+urxvt*color0:     #595729
+urxvt*color1:     #9d5c5d
+urxvt*color2:     #6d9c5c
+urxvt*color3:     #9d9c5c
+urxvt*color4:     #6f5c9d
+urxvt*color5:     #9d5c84
+urxvt*color6:     #5c8d9d
+urxvt*color7:     #bbbbbb
+
+urxvt*color8:     #4a4822
+urxvt*color9:     #b17b7b
+urxvt*color10:    #89b17b
+urxvt*color11:    #b1b17b
+urxvt*color12:    #8b7bb1
+urxvt*color13:    #b17b9c
+urxvt*color14:    #7ba4b1
+urxvt*color15:    #d7d7d7
