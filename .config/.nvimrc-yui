@@ -65,14 +65,11 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Syntax Plugins
-" Plug 'scrooloose/syntastic'
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'othree/yajs.vim', {'for' : 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'plasticboy/vim-markdown'
-Plug 'kchmck/vim-coffee-script'
 Plug 'StanAngeloff/php.vim'
-Plug 'elixir-lang/vim-elixir'
 Plug 'derekwyatt/vim-scala'
 
 call plug#end()
@@ -103,10 +100,3 @@ let g:user_emmet_expandabbr_key = '<Tab>'
 " Because
 command W w
 command Q q
-
-" Syntax-y stuff
-autocmd Filetype html   setlocal sw=2 ts=2 sts=2 noexpandtab
-autocmd Filetype elixir setlocal sw=4 ts=4 sts=4 noexpandtab
-autocmd Filetype cpp    setlocal formatprg=astyle\ -s2pPA1
-
-iabbrev </ </<C-X><C-O>
