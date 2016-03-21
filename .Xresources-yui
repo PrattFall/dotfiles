@@ -16,8 +16,9 @@ URxvt.perl-ext-common: ...,url-select
 URxvt.keysym.M-u: perl:url-selct:select_next
 
 ! Theme
-urxvt*font: xft:Inconsolata\\-g:pixelsize=14:autohint=true
-urxvt*boldFont: xft:Inconsolata\\-g:pixelsize=14:autohint=true
+!urxvt*font: xft:Inconsolata\\-g:pixelsize=14:autohint=true
+urxvt*font: xft:DejaVu\ Sans\ Mono:pixelsize=15:autohint=true
+urxvt*boldFont: xft:DejaVu\ Sans\ Mono:pixelsize=15:autohint=true
 urxvt*scrollbar: false
 urxvt.transparent: false
 urxvt*allow_bold: true

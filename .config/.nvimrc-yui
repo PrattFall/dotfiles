@@ -27,9 +27,7 @@ set ignorecase smartcase
 set list
 set listchars=trail:#,tab:\|\ ,
 set mouse=a
-if (executable('pbcopy') || executable('xclip') || executable('xsel')) && has('clipboard')
-  set clipboard=unnamedplus
-endif
+set clipboard+=unnamedplus
 
 colorscheme yui
 
@@ -47,16 +45,16 @@ set undodir=$HOME/.config/nvim/undo//
 " Vim-Plug
 call plug#begin('~/.nvim/plugged')
 
+" Utils
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'terryma/vim-multiple-cursors'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Neovim stuff
-Plug 'janko-m/vim-test'
 Plug 'benekastah/neomake'
+Plug 'Shougo/deoplete.nvim'
 
 " Snipmate stuff
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -67,10 +65,11 @@ Plug 'honza/vim-snippets'
 " Syntax Plugins
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'othree/yajs.vim', {'for' : 'javascript' }
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'StanAngeloff/php.vim'
-Plug 'derekwyatt/vim-scala'
+Plug 'othree/javascript-libraries-syntax.vim', {'for' : 'javascript' }
+Plug 'plasticboy/vim-markdown', {'for' : 'markdown' }
+Plug 'StanAngeloff/php.vim', {'for' : 'php' }
+Plug 'derekwyatt/vim-scala', {'for' : 'scala' }
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 call plug#end()
 
@@ -97,6 +96,10 @@ set nofoldenable
 " emmet-vim
 let g:user_emmet_expandabbr_key = '<Tab>'
 
+" deocomplete
+let g:deoplete#enable_at_startup = 1
+
 " Because
 command W w
 command Q q
+
