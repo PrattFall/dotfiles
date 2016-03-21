@@ -38,9 +38,9 @@ set tabstop=4
 set nowrap
 
 " Backups
-set backupdir=$HOME/.config/nvim/backup//
-set directory=$HOME/.config/nvim/swap//
-set undodir=$HOME/.config/nvim/undo//
+set backupdir=$HOME/.dotfiles/.config/nvim/backup//
+set directory=$HOME/.dotfiles/.config/nvim/swap//
+set undodir=$HOME/.dotfiles/.config/nvim/undo//
 
 " Vim-Plug
 call plug#begin('~/.nvim/plugged')

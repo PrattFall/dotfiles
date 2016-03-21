@@ -4,7 +4,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
-export PATH=$HOME/.npm_installs/node_modules/*/bin:$PATH
+# export PATH=$HOME/.npm_installs/node_modules/*/bin:$PATH
 
 # XDG support to unclutter my home folder (also for neovim)
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -26,7 +26,7 @@ export EDITOR=nvim
 export SVN_EDITOR=nvim
 
 # NVM stuff
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # Prompt stuff
 autoload -Uz vcs_info
@@ -38,12 +38,12 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[1;34m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_info_msg_0_%}%{\e[0m%}
-%{\e[0;31m%}>%{\e[0;33m%}>%{\e[1;36m%}>%{\e[0m%} '
+PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;34m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_info_msg_0_%}%{\e[0m%}
+%{\e[0;31m%}➥%{\e[0m%} '
 
 # Fix the nasty looking green background on other-writable files and directories
-LS_COLORS=$LS_COLORS:'ow=00;33:' ; export LS_COLORS
+#LS_COLORS=$LS_COLORS:'ow=00;33:' ; export LS_COLORS
 
 # Aliases
-alias lg="ls -a | grep"
-alias ls="ls --color=auto"
+# alias lg="ls -a | grep"
+#alias ls="ls --color=auto"
