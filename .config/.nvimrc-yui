@@ -51,6 +51,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
 
 " Neovim stuff
 Plug 'benekastah/neomake'
@@ -70,6 +72,7 @@ Plug 'plasticboy/vim-markdown', {'for' : 'markdown' }
 Plug 'StanAngeloff/php.vim', {'for' : 'php' }
 Plug 'derekwyatt/vim-scala', {'for' : 'scala' }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'vim-scripts/haskell.vim', {'for': 'haskell'}
 
 call plug#end()
 
@@ -98,6 +101,11 @@ let g:user_emmet_expandabbr_key = '<Tab>'
 
 " deocomplete
 let g:deoplete#enable_at_startup = 1
+
+" GitGutter
+nmap <Leader>gs <Plug>GitGutterStageHunk
+nmap <Leader>gr <Plug>GitGutterRevertHunk
+nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
 " Because
 command W w
