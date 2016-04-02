@@ -28,6 +28,7 @@ set list
 set listchars=trail:#,tab:\|\ ,
 set mouse=a
 set clipboard+=unnamedplus
+set ruler
 
 colorscheme yui
 

@@ -6,4 +6,4 @@ Dot/conf files for:
 - mpv
 - compton
 - i3
-
+- tmux
