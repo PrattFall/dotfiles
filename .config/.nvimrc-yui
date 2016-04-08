@@ -84,10 +84,10 @@ let maplocalleader = ' '
 vmap <Enter> <Plug>(EasyAlign)
 nnoremap <leader>n :NERDTreeToggle<cr>
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>h :wincmd h<cr>
+nnoremap <leader>j :wincmd j<cr>
+nnoremap <leader>k :wincmd k<cr>
+nnoremap <leader>l :wincmd l<cr>
 
 " vim-fugitive
 nnoremap <leader>gd :Gdiff<cr>
@@ -111,4 +111,3 @@ nmap <Leader>gp <Plug>GitGutterPreviewHunk
 " Because
 command W w
 command Q q
-
