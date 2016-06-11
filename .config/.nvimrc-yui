@@ -87,10 +87,10 @@ vmap <Enter> <Plug>(EasyAlign)
 let g:netrw_liststyle=3
 nnoremap <leader>n :vsplit <bar> Explore<cr>
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>h :wincmd h<cr>
+nnoremap <leader>j :wincmd j<cr>
+nnoremap <leader>k :wincmd k<cr>
+nnoremap <leader>l :wincmd l<cr>
 
 " vim-fugitive
 nnoremap <leader>gd :Gdiff<cr>
@@ -117,4 +117,3 @@ tnoremap <Esc> <C-\><C-n>
 " Because
 command W w
 command Q q
-
