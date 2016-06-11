@@ -31,6 +31,8 @@ URxvt*fading: 0
 URxvt*tintColor: #ffffff
 URxvt*scrollBar: false
 URxvt.internalBorder: 8
+
+Xcursor.size: 16
 ! Reminder - Normal color order is as follows:
 ! 0 Black
 ! 1 Red

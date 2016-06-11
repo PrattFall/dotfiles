@@ -48,7 +48,6 @@ call plug#begin('~/.nvim/plugged')
 
 " Utils
 Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -74,6 +73,7 @@ Plug 'StanAngeloff/php.vim', {'for' : 'php' }
 Plug 'derekwyatt/vim-scala', {'for' : 'scala' }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'vim-scripts/haskell.vim', {'for': 'haskell'}
+Plug 'ElmCast/elm-vim', {'for': 'elm'}
 
 call plug#end()
 
@@ -82,7 +82,10 @@ let mapleader      = ' '
 let maplocalleader = ' '
 
 vmap <Enter> <Plug>(EasyAlign)
-nnoremap <leader>n :NERDTreeToggle<cr>
+
+" Replacing NERDTree
+let g:netrw_liststyle=3
+nnoremap <leader>n :vsplit <bar> Explore<cr>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -107,6 +110,9 @@ let g:deoplete#enable_at_startup = 1
 nmap <Leader>gs <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
+
+" Escape terminal with <Esc>
+tnoremap <Esc> <C-\><C-n>
 
 " Because
 command W w

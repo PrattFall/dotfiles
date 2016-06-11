@@ -1,0 +1,1 @@
+/home/bean/.dotfiles/.config/.nvimrc-yui
