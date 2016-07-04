@@ -1,4 +1,4 @@
-! urxvt*termName: rxvt-unicode-256color
+urxvt*termName: rxvt-unicode-256color
 Xfg.dpi: 118
 urxvt*matcher.button: 1
 
@@ -66,23 +66,45 @@ Xcursor.size: 16
 /* urxvt*color15:    #f3f3f3 */
 
 !yui theme
-urxvt*background: #f5f5f5
-urxvt*foreground: #6a6731
+/* urxvt*background: #f5f5f5 */
+/* urxvt*foreground: #6a6731 */
 
-urxvt*color0:     #595729
-urxvt*color1:     #9d5c5d
-urxvt*color2:     #6d9c5c
-urxvt*color3:     #9d9c5c
-urxvt*color4:     #6f5c9d
-urxvt*color5:     #9d5c84
-urxvt*color6:     #5c8d9d
-urxvt*color7:     #bbbbbb
+/* urxvt*color0:     #595729 */
+/* urxvt*color1:     #9d5c5d */
+/* urxvt*color2:     #6d9c5c */
+/* urxvt*color3:     #9d9c5c */
+/* urxvt*color4:     #6f5c9d */
+/* urxvt*color5:     #9d5c84 */
+/* urxvt*color6:     #5c8d9d */
+/* urxvt*color7:     #bbbbbb */
 
-urxvt*color8:     #4a4822
-urxvt*color9:     #b17b7b
-urxvt*color10:    #89b17b
-urxvt*color11:    #b1b17b
-urxvt*color12:    #8b7bb1
-urxvt*color13:    #b17b9c
-urxvt*color14:    #7ba4b1
-urxvt*color15:    #d7d7d7
+/* urxvt*color8:     #4a4822 */
+/* urxvt*color9:     #b17b7b */
+/* urxvt*color10:    #89b17b */
+/* urxvt*color11:    #b1b17b */
+/* urxvt*color12:    #8b7bb1 */
+/* urxvt*color13:    #b17b9c */
+/* urxvt*color14:    #7ba4b1 */
+/* urxvt*color15:    #d7d7d7 */
+
+!Galaxy
+urxvt*background: #1d2837
+urxvt*foreground: #eeeeee
+
+urxvt*color0:     #0d131a
+urxvt*color1:     #f9555f
+urxvt*color2:     #21b089
+urxvt*color3:     #c9d647
+urxvt*color4:     #589df6
+urxvt*color5:     #944d95
+urxvt*color6:     #1f9ee7
+urxvt*color7:     #49648a
+
+urxvt*color8:     #3f5778
+urxvt*color9:     #fa8c8f
+urxvt*color10:    #35bb9a
+urxvt*color11:    #ffff55
+urxvt*color12:    #589df6
+urxvt*color13:    #e75699
+urxvt*color14:    #3979bc
+urxvt*color15:    #ffffff
