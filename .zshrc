@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -e
 
 # export PATH=$HOME/.npm_installs/node_modules/*/bin:$PATH
-export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/Library/Haskell/bin:$PATH
 
 # XDG support to unclutter my home folder (also for neovim)
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -40,7 +40,7 @@ precmd() {
 
 setopt prompt_subst
 PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;35m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_info_msg_0_%}%{\e[0m%}
-%{\e[0;31m%}➥%{\e[0m%} '
+%{\e[0;31m%}➠%{\e[0m%} '
 
 # Fix the nasty looking green background on other-writable files and directories
 #LS_COLORS=$LS_COLORS:'ow=00;33:' ; export LS_COLORS

@@ -1,1 +1,1 @@
-/home/bean/.dotfiles/.config/.nvimrc-yui
+/Users/Tomato/.dotfiles/.config/.nvimrc-yui

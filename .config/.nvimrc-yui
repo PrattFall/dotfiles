@@ -17,7 +17,7 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 
-set t_Co=256
+" set t_Co=256
 
 set history=500
 set encoding=utf-8
@@ -47,34 +47,26 @@ set undodir=$HOME/.dotfiles/.config/nvim/undo//
 call plug#begin('~/.nvim/plugged')
 
 " Utils
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-commentary'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'easymotion/vim-easymotion'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'majutsushi/tagbar'
 
 " Neovim stuff
-Plug 'benekastah/neomake'
 Plug 'Shougo/deoplete.nvim'
-
-" Snipmate stuff
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
+Plug 'benekastah/neomake'
 
 " Syntax Plugins
+Plug 'ElmCast/elm-vim'
+" Plug 'StanAngeloff/php.vim', {'for' : 'php' }
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'othree/yajs.vim', {'for' : 'javascript' }
-Plug 'othree/javascript-libraries-syntax.vim', {'for' : 'javascript' }
-Plug 'plasticboy/vim-markdown', {'for' : 'markdown' }
-Plug 'StanAngeloff/php.vim', {'for' : 'php' }
-Plug 'derekwyatt/vim-scala', {'for' : 'scala' }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
-Plug 'ElmCast/elm-vim'
+Plug 'othree/javascript-libraries-syntax.vim', {'for' : 'javascript' }
+Plug 'othree/yajs.vim', {'for' : 'javascript' }
+Plug 'plasticboy/vim-markdown', {'for' : 'markdown' }
 
 call plug#end()
 
@@ -92,10 +84,6 @@ nnoremap <leader>l :wincmd l<cr>
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>
 
-" vim-fugitive
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gs :Gstatus<cr>
-
 " emmet-vim
 let g:user_emmet_expandabbr_key = '<Tab>'
 
@@ -107,8 +95,13 @@ nmap <Leader>gs <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
+" Neomake
+autocmd! BufWritePost * Neomake
+
 " Escape terminal with <Esc>
 tnoremap <Esc> <C-\><C-n>
+
+set tags=./tags;
 
 " Because
 command W w

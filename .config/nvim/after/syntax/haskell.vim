@@ -1,5 +1,5 @@
-syntax match hsNiceOperator "\\\ze[[:alpha:][:space:]_([]" conceal cchar=λ
-syntax match hsNiceOperator "<-" conceal cchar=←
+syntax match hsNiceOperator "\\\ze[[:alpha:][:space:]_([]" conceal cchar=λ 
+" syntax match hsNiceOperator "<-" conceal cchar=←
 syntax match hsNiceOperator "->" conceal cchar=→
 syntax match hsNiceOperator "\<pi\>" conceal cchar=π
 " syntax match hsNiceOperator "\/=" conceal cchar=≠
