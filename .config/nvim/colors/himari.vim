@@ -38,9 +38,10 @@ hi VertSplit    ctermbg=0    ctermfg=0 cterm=NONE
 hi MatchParen   ctermbg=4    ctermfg=0
 hi StatusLine   ctermbg=0    ctermfg=7 cterm=NONE
 hi StatusLineNC ctermbg=0    ctermfg=7 cterm=NONE
-hi Pmenu        ctermfg=6
+hi Pmenu        ctermbg=0    ctermfg=6
 hi Directory    ctermfg=6
 hi Parens       ctermfg=7
+hi ColorColumn  ctermbg=0
 
 " Defaults
 hi Constant   ctermfg=1
@@ -104,7 +105,6 @@ hi Title ctermfg=13
 " hi DiffText
 " hi Folded
 " hi CursorColumn
-" hi ColorColumn
 
 " hi rubyClass 
 " hi rubyFunction 

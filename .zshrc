@@ -48,3 +48,6 @@ PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;35m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_i
 # Aliases
 # alias lg="ls -a | grep"
 #alias ls="ls --color=auto"
+alias vi="nvim"
+
+. $HOME/.nix-profile/etc/profile.d/nix.sh
