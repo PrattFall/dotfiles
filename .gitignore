@@ -1,11 +1,11 @@
 userstyles/
 .emacs
 .emacs.d/
-.vim/swap/*
-.vim/undo/*
-.vim/plugged/*
-.vim/backup/*
-.vim/.netrwhist
+.config/nvim/swap/*
+.config/nvim/undo/*
+.config/nvim/plugged/*
+.config/nvim/backup/*
+.config/nvim/.netrwhist
 .mpd/playlists/
 .mpd/mpd.db
 .mpd/mpd.log
