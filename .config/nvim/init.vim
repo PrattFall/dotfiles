@@ -101,6 +101,30 @@ tnoremap <Esc> <C-\><C-n>
 command W w
 command Q q
 
-set colorcolumn=80
-highlight OverLength ctermbg=1 ctermfg=white
-match OverLength /\%81v.\+/
+" Column Toggling
+nnoremap <Leader>cc :call ColumnGuideToggle()<CR>
+
+let g:showColumnGuideToggle = 1
+
+function! ColumnGuideToggle()
+	if g:showColumnGuideToggle == 1
+		let g:showColumnGuideToggle = 0
+	else
+		let g:showColumnGuideToggle = 1
+	endif
+
+	call ShowColumnGuide()
+endfunction
+
+function! ShowColumnGuide()
+	if g:showColumnGuideToggle == 1
+		set colorcolumn=80
+		highlight OverLength ctermbg=1 ctermfg=white
+		match OverLength /\%81v.\+/
+	else
+		set colorcolumn=0
+		match none
+	endif
+endfunction
+
+call ShowColumnGuide()
