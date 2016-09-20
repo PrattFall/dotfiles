@@ -13,7 +13,6 @@ set mouse=a
 set clipboard+=unnamedplus
 set ruler
 set tags=./tags;
-set colorcolumn=81
 
 " Backups
 set backupdir=$HOME/.dotfiles/.config/nvim/backup//
@@ -84,7 +83,7 @@ map <Leader>n :NERDTreeToggle<CR>
 " emmet-vim
 let g:user_emmet_expandabbr_key = '<Tab>'
 
-" deocomplete
+" Deoplete
 let g:deoplete#enable_at_startup = 1
 
 " GitGutter
@@ -102,5 +101,6 @@ tnoremap <Esc> <C-\><C-n>
 command W w
 command Q q
 
+set colorcolumn=80
 highlight OverLength ctermbg=1 ctermfg=white
 match OverLength /\%81v.\+/
