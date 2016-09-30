@@ -52,7 +52,7 @@ Plug 'tpope/vim-commentary'
 
 " Neovim stuff
 Plug 'Shougo/deoplete.nvim'
-" Plug 'benekastah/neomake'
+Plug 'benekastah/neomake'
 
 " Syntax Plugins
 Plug 'ElmCast/elm-vim'
@@ -92,7 +92,7 @@ nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
 " Neomake
-" autocmd BufWritePost * Neomake
+autocmd BufWritePost * Neomake
 
 " Escape terminal with <Esc>
 tnoremap <Esc> <C-\><C-n>
