@@ -51,18 +51,27 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 
 " Neovim stuff
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/vimproc.vim'
 Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
+Plug 'autozimu/LanguageClient-neovim', {
+			\ 'branch': 'next',
+			\ 'do': 'bash install.sh',
+			\ }
 
 " Syntax Plugins
-Plug 'ElmCast/elm-vim'
-Plug 'StanAngeloff/php.vim', {'for' : 'php' }
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
-Plug 'othree/javascript-libraries-syntax.vim', {'for' : 'javascript' }
-Plug 'othree/yajs.vim', {'for' : 'javascript' }
-Plug 'plasticboy/vim-markdown', {'for' : 'markdown' }
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'cakebaker/scss-syntax.vim',              { 'for' : 'scss' }
+Plug 'hail2u/vim-css3-syntax',                 { 'for' : 'css' }
+Plug 'neovimhaskell/haskell-vim',              { 'for' : 'haskell'}
+Plug 'othree/html5.vim'
+Plug 'othree/javascript-libraries-syntax.vim', { 'for' : 'javascript' }
+Plug 'othree/yajs.vim',                        { 'for' : 'javascript' }
+Plug 'leafgarland/typescript-vim'
+Plug 'plasticboy/vim-markdown',                { 'for' : 'markdown' }
+Plug 'reasonml-editor/vim-reason-plus'
+
 
 call plug#end()
 
@@ -86,6 +95,20 @@ let g:user_emmet_expandabbr_key = '<Tab>'
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Deoplete for Ocaml
+" let g:deoplete#omni_patterns = {}
+" let g:deoplete#omni_patterns.ocaml = '[^ ,;\t\[()\]]'
+
+let g:LanguageClient_serverCommands = {
+	\ 'reason': ['/Users/Tomato/node/bin/reason-language-server/reason-language-server.exe'],
+	\ 'ocaml': ['/Users/Tomato/node/bin/reason-language-server/reason-language-server.exe'],
+	\}
+
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<cr>
+nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<cr>
+nnoremap <silent> <cr> :call LanguageClient_textDocument_hover()<cr>
+" let g:ale_ocaml_ols_executable = '$HOME/node/bin/ocaml-language-server'
+
 " GitGutter
 nmap <Leader>gs <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
@@ -93,6 +116,9 @@ nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
 " Neomake
 autocmd BufWritePost * Neomake
+
+" Vim-markdown
+let g:vim_markdown_folding_disabled = 1
 
 " Escape terminal with <Esc>
 tnoremap <Esc> <C-\><C-n>
