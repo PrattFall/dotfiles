@@ -7,3 +7,4 @@ Dot/conf files for:
 - compton
 - i3
 - tmux
+- qutebrowser
