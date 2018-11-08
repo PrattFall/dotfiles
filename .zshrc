@@ -4,7 +4,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
-# export PATH=$HOME/.npm_installs/node_modules/*/bin:$PATH
 export PATH=$HOME/Library/Haskell/bin:$PATH
 
 # XDG support to unclutter my home folder (also for neovim)
@@ -26,9 +25,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 export EDITOR=nvim
 export SVN_EDITOR=nvim
 
-# NVM stuff
-# source /usr/share/nvm/init-nvm.sh
-
 # Prompt stuff
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
@@ -42,12 +38,6 @@ setopt prompt_subst
 PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;35m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_info_msg_0_%}%{\e[0m%}
 %{\e[0;31m%}➠%{\e[0m%} '
 
-# Fix the nasty looking green background on other-writable files and directories
-#LS_COLORS=$LS_COLORS:'ow=00;33:' ; export LS_COLORS
-
 # Aliases
-# alias lg="ls -a | grep"
-#alias ls="ls --color=auto"
 alias vi="nvim"
 
-#. $HOME/.nix-profile/etc/profile.d/nix.sh

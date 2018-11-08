@@ -53,12 +53,7 @@ Plug 'tpope/vim-commentary'
 " Neovim stuff
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim'
-Plug 'benekastah/neomake'
 Plug 'w0rp/ale'
-Plug 'autozimu/LanguageClient-neovim', {
-			\ 'branch': 'next',
-			\ 'do': 'bash install.sh',
-			\ }
 
 " Syntax Plugins
 Plug 'OmniSharp/omnisharp-vim'
@@ -68,10 +63,10 @@ Plug 'neovimhaskell/haskell-vim',              { 'for' : 'haskell'}
 Plug 'othree/html5.vim'
 Plug 'othree/javascript-libraries-syntax.vim', { 'for' : 'javascript' }
 Plug 'othree/yajs.vim',                        { 'for' : 'javascript' }
-Plug 'leafgarland/typescript-vim'
 Plug 'plasticboy/vim-markdown',                { 'for' : 'markdown' }
 Plug 'reasonml-editor/vim-reason-plus'
-
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript',            { 'do': './install.sh' }
 
 call plug#end()
 
@@ -89,33 +84,16 @@ nnoremap <leader>l :wincmd l<cr>
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>
 
-" emmet-vim
-let g:user_emmet_expandabbr_key = '<Tab>'
+" ALE
+let g:ale_completion_enabled = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-
-" Deoplete for Ocaml
-" let g:deoplete#omni_patterns = {}
-" let g:deoplete#omni_patterns.ocaml = '[^ ,;\t\[()\]]'
-
-let g:LanguageClient_serverCommands = {
-	\ 'reason': ['/Users/Tomato/node/bin/reason-language-server/reason-language-server.exe'],
-	\ 'ocaml': ['/Users/Tomato/node/bin/reason-language-server/reason-language-server.exe'],
-	\}
-
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<cr>
-nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<cr>
-nnoremap <silent> <cr> :call LanguageClient_textDocument_hover()<cr>
-" let g:ale_ocaml_ols_executable = '$HOME/node/bin/ocaml-language-server'
 
 " GitGutter
 nmap <Leader>gs <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
-
-" Neomake
-autocmd BufWritePost * Neomake
 
 " Vim-markdown
 let g:vim_markdown_folding_disabled = 1
