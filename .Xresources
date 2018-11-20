@@ -1,5 +1,4 @@
 urxvt*termName: rxvt-unicode-256color
-Xfg.dpi: 118
 urxvt*matcher.button: 1
 
 URxvt.perl-lib: /home/bean/.urxvt.d/perls/
@@ -16,7 +15,6 @@ URxvt.perl-ext-common: ...,url-select
 URxvt.keysym.M-u: perl:url-selct:select_next
 
 ! Theme
-!urxvt*font: xft:Inconsolata\\-g:pixelsize=14:autohint=true
 urxvt*font: xft:DejaVu\ Sans\ Mono:pixelsize=13:autohint=true
 urxvt*boldFont: xft:DejaVu\ Sans\ Mono:pixelsize=13:autohint=true
 urxvt*scrollbar: false
@@ -88,23 +86,49 @@ Xcursor.size: 16
 /* urxvt*color15:    #d7d7d7 */
 
 !Galaxy
-urxvt*background: #1d2837
-urxvt*foreground: #eeeeee
+/* urxvt*background: #1d2837 */
+/* urxvt*foreground: #eeeeee */
 
-urxvt*color0:     #0d131a
-urxvt*color1:     #f9555f
-urxvt*color2:     #21b089
-urxvt*color3:     #c9d647
-urxvt*color4:     #589df6
-urxvt*color5:     #944d95
-urxvt*color6:     #1f9ee7
-urxvt*color7:     #49648a
+/* urxvt*color0:     #0d131a */
+/* urxvt*color1:     #f9555f */
+/* urxvt*color2:     #21b089 */
+/* urxvt*color3:     #c9d647 */
+/* urxvt*color4:     #589df6 */
+/* urxvt*color5:     #944d95 */
+/* urxvt*color6:     #1f9ee7 */
+/* urxvt*color7:     #49648a */
 
-urxvt*color8:     #3f5778
-urxvt*color9:     #fa8c8f
-urxvt*color10:    #35bb9a
-urxvt*color11:    #ffff55
-urxvt*color12:    #589df6
-urxvt*color13:    #e75699
-urxvt*color14:    #3979bc
-urxvt*color15:    #ffffff
+/* urxvt*color8:     #3f5778 */
+/* urxvt*color9:     #fa8c8f */
+/* urxvt*color10:    #35bb9a */
+/* urxvt*color11:    #ffff55 */
+/* urxvt*color12:    #589df6 */
+/* urxvt*color13:    #e75699 */
+/* urxvt*color14:    #3979bc */
+/* urxvt*color15:    #ffffff */
+
+!Manjaro Alter
+*background:                      #222d31
+*foreground:                      #d8d8d8
+*fading:                          8
+*fadeColor:                       black
+*cursorColor:                     #1abb9b
+*pointerColorBackground:          #222d31
+*pointerColorForeground:          #16A085
+
+*color0:                          #161d1f
+*color1:                          #ab4642
+*color2:                          #6d956d
+*color3:                          #f7ca88
+*color4:                          #7cafc2
+*color5:                          #ba8baf
+*color6:                          #1ABB9B
+*color7:                          #d8d8d8
+*color8:                          #161d1f
+*color9:                          #ab4642
+*color10:                         #7bb97b
+*color11:                         #f7ca88
+*color12:                         #7cafc2
+*color13:                         #ba8baf
+*color14:                         #1ABB9B
+*color15:                         #f8f8f8

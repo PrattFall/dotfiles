@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Basically copies blurlock but instead of just bluring the screen
+# it pixelates it
+
+import -window root /tmp/screenshot.png
+
+convert /tmp/screenshot.png -scale 10% -scale 1000% /tmp/screenshotpixel.png
+rm /tmp/screenshot.png
+
+i3lock -i /tmp/screenshotpixel.png
+
+sleep 1
+
+exit 0

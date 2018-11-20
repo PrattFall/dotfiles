@@ -67,6 +67,8 @@ hi htmlEndTag ctermfg=7
 " Things that should just be normal text color
 hi javascriptBraces ctermfg=NONE
 
+hi SpellBad ctermbg=1 ctermfg=7
+
 " hi Boolean guifg=#5c8d9d ctermfg=6
 " hi Keyword guifg=#5c8d9d ctermfg=6
 " hi Label guifg=#5c8d9d ctermfg=6

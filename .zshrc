@@ -36,8 +36,12 @@ precmd() {
 
 setopt prompt_subst
 PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;35m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_info_msg_0_%}%{\e[0m%}
-%{\e[0;31m%}➠%{\e[0m%} '
+%{\e[0;31m%}>%{\e[0m%} '
 
 # Aliases
 alias vi="nvim"
+alias vim="nvim"
+alias ls="ls --color"
+alias battery="acpi"
 
+source .machine_profile

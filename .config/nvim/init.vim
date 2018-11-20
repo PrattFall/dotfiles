@@ -49,6 +49,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'autozimu/LanguageClient-neovim', {
+			\ 'branch': 'next',
+			\ 'do': 'bash install.sh'
+			\}
 
 " Neovim stuff
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -80,6 +84,15 @@ nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
+
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+			\ "ocaml": ["ocaml-language-server", "--stdio"]
+			\ }
+
+nnoremap <silent> <Leader>cd :call LanguageClient_textDocument_definition()<cr>
+nnoremap <silent> <Leader>cf :call LanguageClient_textDocument_formatting()<cr>
+nnoremap <silent> <cr> :call LanguageClient_textDocument_hover()<cr>
 
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>
