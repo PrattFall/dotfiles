@@ -78,7 +78,9 @@ call plug#end()
 let mapleader      = ' '
 let maplocalleader = ' '
 
+" EasyAlign
 vmap <Enter> <Plug>(EasyAlign)
+xmap <Enter> <Plug>(EasyAlign)
 
 nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
