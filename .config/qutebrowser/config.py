@@ -15,7 +15,7 @@ xresources = read_xresources('*')
 c.url.start_pages = ["https://www.google.com"]
 
 # Bindings
-config.bind(',v', 'spawn mpv {url}')
+config.bind(',v', 'hint links spawn mpv {hint-url}')
 
 # Theme
 c.tabs.position = "top"

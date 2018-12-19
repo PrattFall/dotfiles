@@ -45,14 +45,12 @@ colorscheme himari
 call plug#begin('~/.nvim/plugged')
 
 " Utils
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
-Plug 'autozimu/LanguageClient-neovim', {
-			\ 'branch': 'next',
-			\ 'do': 'bash install.sh'
-			\}
 
 " Neovim stuff
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -61,6 +59,10 @@ Plug 'w0rp/ale'
 
 " Syntax Plugins
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'fsharp/vim-fsharp', {
+			\ 'for': 'fsharp',
+			\ 'do': 'make fsautocomplete',
+			\ }
 Plug 'cakebaker/scss-syntax.vim',              { 'for' : 'scss' }
 Plug 'hail2u/vim-css3-syntax',                 { 'for' : 'css' }
 Plug 'neovimhaskell/haskell-vim',              { 'for' : 'haskell'}
@@ -82,33 +84,32 @@ let maplocalleader = ' '
 vmap <Enter> <Plug>(EasyAlign)
 xmap <Enter> <Plug>(EasyAlign)
 
-nnoremap <leader>h :wincmd h<cr>
-nnoremap <leader>j :wincmd j<cr>
-nnoremap <leader>k :wincmd k<cr>
-nnoremap <leader>l :wincmd l<cr>
+nnoremap <leader>hh :wincmd h<cr>
+nnoremap <leader>jj :wincmd j<cr>
+nnoremap <leader>kk :wincmd k<cr>
+nnoremap <leader>ll :wincmd l<cr>
 
-" LanguageClient
-let g:LanguageClient_serverCommands = {
-			\ "ocaml": ["ocaml-language-server", "--stdio"]
-			\ }
+" Language Client
+if executable('ocaml-language-server')
+	au User lsp_setup call lsp#register_server({
+				\ 'name': 'ocaml-language-server',
+				\ 'cmd': {server_info->[&shell, &shellcmdflag, 'ocaml-language-server --stdio']},
+				\ 'whitelist': ['ocaml'],
+				\ })
+endif
 
-nnoremap <silent> <Leader>cd :call LanguageClient_textDocument_definition()<cr>
-nnoremap <silent> <Leader>cf :call LanguageClient_textDocument_formatting()<cr>
-nnoremap <silent> <cr> :call LanguageClient_textDocument_hover()<cr>
+nmap <silent> <Leader>cd :LspDefinition<cr>
+nmap <silent> <Leader>cf :LspDocumentFormat<cr>
+nmap <silent> <cr> :LspHover<cr>
 
 " NERDTree
-map <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>n :NERDTreeToggle<cr>
 
 " ALE
 let g:ale_completion_enabled = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-
-" GitGutter
-nmap <Leader>gs <Plug>GitGutterStageHunk
-nmap <Leader>gr <Plug>GitGutterRevertHunk
-nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
 " Vim-markdown
 let g:vim_markdown_folding_disabled = 1
@@ -121,7 +122,7 @@ command W w
 command Q q
 
 " Column Toggling
-nnoremap <Leader>cc :call ColumnGuideToggle()<CR>
+nnoremap <Leader>cc :call ColumnGuideToggle()<cr>
 
 let g:showColumnGuide = 1
 

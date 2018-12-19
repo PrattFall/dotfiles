@@ -1,7 +1,7 @@
 username=`id -nu`
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=5000
+SAVEHIST=5000
 bindkey -e
 
 export PATH=$HOME/Library/Haskell/bin:$PATH
@@ -34,6 +34,11 @@ precmd() {
 	vcs_info
 }
 
+setopt auto_cd
+setopt always_to_end
+setopt auto_menu
+setopt auto_list
+setopt glob_complete
 setopt prompt_subst
 PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;35m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_info_msg_0_%}%{\e[0m%}
 %{\e[0;31m%}>%{\e[0m%} '
@@ -41,7 +46,13 @@ PROMPT=$'%{\e[0;36m%}%n@%m %{\e[0m%}%{\e[0;35m%}%~%{\e[0m%} %{\e[0;32m%}%{$vcs_i
 # Aliases
 alias vi="nvim"
 alias vim="nvim"
-alias ls="ls --color"
+alias ls="ls --color=always --human-readable"
+alias grep="grep --color=auto"
+alias less="less --quiet"
 alias battery="acpi"
 
-source .machine_profile
+source ~/.machine_profile.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
