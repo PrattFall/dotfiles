@@ -5,6 +5,7 @@ SAVEHIST=5000
 bindkey -e
 
 export PATH=$HOME/Library/Haskell/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
 
 # XDG support to unclutter my home folder (also for neovim)
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -50,6 +51,7 @@ alias ls="ls --color=always --human-readable"
 alias grep="grep --color=auto"
 alias less="less --quiet"
 alias battery="acpi"
+alias open="xdg-open"
 
 source ~/.machine_profile.zsh
 

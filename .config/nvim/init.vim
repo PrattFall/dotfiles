@@ -67,8 +67,11 @@ Plug 'cakebaker/scss-syntax.vim',              { 'for' : 'scss' }
 Plug 'hail2u/vim-css3-syntax',                 { 'for' : 'css' }
 Plug 'neovimhaskell/haskell-vim',              { 'for' : 'haskell'}
 Plug 'othree/html5.vim'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'othree/javascript-libraries-syntax.vim', { 'for' : 'javascript' }
 Plug 'othree/yajs.vim',                        { 'for' : 'javascript' }
+Plug 'mxw/vim-jsx'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'plasticboy/vim-markdown',                { 'for' : 'markdown' }
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -105,14 +108,14 @@ nmap <silent> <cr> :LspHover<cr>
 " NERDTree
 nmap <silent> <Leader>n :NERDTreeToggle<cr>
 
-" ALE
-let g:ale_completion_enabled = 1
-
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
 " Vim-markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Mustache
+let g:mustache_abbreviations = 1
 
 " Escape terminal with <Esc>
 tnoremap <Esc> <C-\><C-n>
@@ -120,6 +123,18 @@ tnoremap <Esc> <C-\><C-n>
 " Because
 command W w
 command Q q
+
+" Statusline formatting
+set statusline=
+set statusline+=%f\ 
+set statusline+=%m
+set statusline+=%=
+set statusline+=%=
+set statusline+=%l
+set statusline+=:
+set statusline+=%c
+set statusline+=%=
+set statusline+=%y
 
 " Column Toggling
 nnoremap <Leader>cc :call ColumnGuideToggle()<cr>

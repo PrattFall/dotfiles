@@ -5,7 +5,7 @@
 
 import -window root /tmp/screenshot.png
 
-convert /tmp/screenshot.png -scale 10% -scale 1000% /tmp/screenshotpixel.png
+convert /tmp/screenshot.png -scale 5% -scale 2000% /tmp/screenshotpixel.png
 rm /tmp/screenshot.png
 
 i3lock -i /tmp/screenshotpixel.png
