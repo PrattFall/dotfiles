@@ -6,8 +6,7 @@ set history=500
 set encoding=utf-8
 set showcmd
 set backspace=indent,eol,start
-set ignorecase smartcase
-set list
+set ignorecase smartcase set list
 set listchars=trail:#,tab:\|\ ,
 set mouse=a
 set clipboard+=unnamedplus
@@ -58,6 +57,7 @@ Plug 'Shougo/vimproc.vim'
 Plug 'w0rp/ale'
 
 " Syntax Plugins
+Plug 'neovimhaskell/haskell-vim',              { 'for' : 'haskell'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'fsharp/vim-fsharp', {
 			\ 'for': 'fsharp',
@@ -65,17 +65,20 @@ Plug 'fsharp/vim-fsharp', {
 			\ }
 Plug 'cakebaker/scss-syntax.vim',              { 'for' : 'scss' }
 Plug 'hail2u/vim-css3-syntax',                 { 'for' : 'css' }
-Plug 'neovimhaskell/haskell-vim',              { 'for' : 'haskell'}
 Plug 'othree/html5.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'plasticboy/vim-markdown',                { 'for' : 'markdown' }
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'tpope/vim-fireplace'                     { 'for' : 'clojure' }
+
+" JavaScript
 Plug 'othree/javascript-libraries-syntax.vim', { 'for' : 'javascript' }
 Plug 'othree/yajs.vim',                        { 'for' : 'javascript' }
 Plug 'mxw/vim-jsx'
+" Typescript
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'plasticboy/vim-markdown',                { 'for' : 'markdown' }
-Plug 'reasonml-editor/vim-reason-plus'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript',            { 'do': './install.sh' }
+Plug 'HerringtonDarkholme/yats.vim'
 
 call plug#end()
 

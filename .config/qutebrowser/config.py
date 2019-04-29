@@ -13,6 +13,7 @@ xresources = read_xresources('*')
 
 # Defaults
 c.url.start_pages = ["https://www.google.com"]
+c.tabs.background = True
 
 # Bindings
 config.bind(',v', 'hint links spawn mpv {hint-url}')
@@ -53,3 +54,4 @@ c.colors.tabs.selected.odd.bg = xresources['*background']
 c.colors.tabs.selected.odd.fg = xresources['*color6']
 
 c.fonts.completion.category = "10pt monospace"
+
