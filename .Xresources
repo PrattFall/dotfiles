@@ -51,7 +51,7 @@ XTerm*selectToClipboard: true
 *color14:                         #1ABB9B
 
 !! white dark/light
-*color7:                          #d8d8d8
+*color7:                          #4f6972
 *color15:                         #f8f8f8
 
 Xcursor.theme: xcursor-breeze
