@@ -15,6 +15,8 @@ Plug 'Shougo/vimproc.vim'
 Plug 'w0rp/ale'
 
 " Syntax Plugins
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-classpath'
 source $HOME/.config/nvim/modules/plugins/vim-fireplace.vim
 source $HOME/.config/nvim/modules/plugins/vim-markdown.vim
 source $HOME/.config/nvim/modules/plugins/vim-mustache-handlebars.vim
