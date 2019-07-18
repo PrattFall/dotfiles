@@ -6,6 +6,7 @@ bindkey -e
 
 export PATH=$HOME/Library/Haskell/bin:$PATH
 export PATH=$HOME/.config/composer/vendor/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # XDG support to unclutter my home folder (also for neovim)
 export XDG_CONFIG_HOME="$HOME/.config"
