@@ -1,17 +1,17 @@
 filetype indent on
 syntax on
-colorscheme himari
+color himari
 
-set history=500
-set encoding=utf-8
-set showcmd
 set backspace=indent,eol,start
+set clipboard+=unnamedplus
+set encoding=utf-8
+set history=500
 set ignorecase smartcase
 set list
 set listchars=trail:#,tab:\|\ ,
 set mouse=a
-set clipboard+=unnamedplus
 set ruler
+set showcmd
 set tags=./tags;
 
 " Backups

@@ -1,27 +1,96 @@
 set background=dark
-set t_Co=256
-highlight clear
+hi clear
 let g:colors_name = "himari"
+set t_Co=256
 
 syn match Parens /[(){}\[\]]/
 
-" System and directory stuff
-hi Normal       ctermfg=NONE     ctermbg=NONE     cterm=NONE
-hi Visual       ctermfg=Black    ctermbg=DarkCyan cterm=NONE
+" GUI
+" ------------------------------------------------------------------------------
 
-hi ColorColumn  ctermfg=NONE     ctermbg=Black    cterm=NONE
-hi Cursor       ctermfg=NONE     ctermbg=NONE     cterm=NONE
-hi CursorLine   ctermfg=NONE     ctermbg=Black    cterm=NONE
-hi CursorLineNR ctermfg=DarkCyan ctermbg=NONE     cterm=NONE
-hi Directory    ctermfg=DarkCyan ctermbg=NONE     cterm=NONE
-hi LineNr       ctermfg=LightGray     ctermbg=NONE     cterm=NONE
-hi MatchParen   ctermfg=Black    ctermbg=DarkBlue cterm=NONE
-hi Parens       ctermfg=LightGray     ctermbg=NONE     cterm=NONE
-hi Pmenu        ctermfg=DarkCyan ctermbg=Black    cterm=NONE
-hi Search       ctermfg=Black    ctermbg=DarkBlue cterm=NONE
-hi StatusLine   ctermfg=LightGray     ctermbg=Black    cterm=NONE
-hi StatusLineNC ctermfg=LightGray     ctermbg=Black    cterm=NONE
-hi VertSplit    ctermfg=Black    ctermbg=Black    cterm=NONE
+let GuiBackground = '#222d31'
+let GuiForeground = '#d8d8d8'
+let GuiBlack      = '#161d1f'
+let GuiRed        = '#ab4642'
+let GuiGreen      = '#6d956d'
+let GuiGreenLight = '#7bb97b'
+let GuiYellow     = '#f7ca88'
+let GuiBlue       = '#7cafc2'
+let GuiMagenta    = '#ba8baf'
+let GuiCyan       = '#1abb9b'
+let GuiWhite      = '#4f6972'
+let GuiWhiteLight = '#f8f8f8'
+
+hi Normal       guifg=#d8d8d8 guibg=#222d31
+hi Visual       guifg=#161d1f guibg=#1abb9b
+
+hi ColorColumn  guifg=NONE    guibg=#161d1f
+hi Cursor       guifg=NONE    guibg=NONE
+hi CursorLine   guifg=NONE    guibg=#161d1f
+hi CursorLineNR guifg=#1abb9b guibg=NONE
+hi Directory    guifg=#1abb9b guibg=NONE
+hi LineNr       guifg=#4f6972 guibg=NONE
+hi MatchParen   guifg=#161d1f guibg=#7cafc2
+hi Parens       guifg=#4f6972 guibg=NONE
+hi Pmenu        guifg=#1abb9b guibg=#161d1f
+hi Search       guifg=#161d1f guibg=#7cafc2
+hi StatusLine   guifg=#4f6972 guibg=#161d1f
+hi StatusLineNC guifg=#4f6972 guibg=#161d1f
+hi VertSplit    guifg=#161d1f guibg=#161d1f
+
+" Defaults
+hi Constant     guifg=#ab4642 guibg=#222d31
+hi Identifier   guifg=#7bb97b guibg=#222d31
+hi Keyword      guifg=#1abb9b guibg=#222d31
+hi PreProc      guifg=#ba8baf guibg=#222d31
+hi Statement    guifg=#7cafc2 guibg=#222d31
+hi Type         guifg=#1abb9b guibg=#222d31
+
+" Things that break from defaults
+hi DiffAdd      guifg=#6d956d guibg=#161d1f
+hi DiffChange   guifg=#7cafc2 guibg=#161d1f
+hi DiffDelete   guifg=#ab4642 guibg=#161d1f
+hi DiffText     guifg=#161d1f guibg=#7cafc2
+hi FoldColumn   guifg=NONE    guibg=#4f6972
+hi Folded       guifg=#ba8baf guibg=#161d1f
+hi Function     guifg=#1abb9b guibg=NONE
+hi SpellBad     guifg=#4f6972 guibg=#ab4642
+hi String       guifg=#6d956d guibg=NONE
+hi Title        guifg=#ba8baf guibg=NONE
+
+" Things that should be mostly hidden
+hi Comment    guifg=#4f6972 guibg=NONE
+hi Define     guifg=#4f6972 guibg=NONE
+hi NonText    guifg=#4f6972 guibg=NONE
+hi Special    guifg=#4f6972 guibg=NONE
+hi SpecialKey guifg=#4f6972 guibg=NONE
+hi Tag        guifg=#4f6972 guibg=NONE
+hi htmlEndTag guifg=#4f6972 guibg=NONE
+hi htmlTag    guifg=#4f6972 guibg=NONE
+
+" Things that should just be normal text color
+hi javascriptBraces guifg=NONE guibg=NONE
+
+" TERMINAL
+" ------------------------------------------------------------------------------
+
+" System and directory stuff
+hi Normal ctermfg=NONE            ctermbg=NONE     cterm=NONE
+hi Visual ctermfg=Black           ctermbg=DarkCyan cterm=NONE
+
+hi ColorColumn  ctermfg=NONE      ctermbg=Black    cterm=NONE
+hi Cursor       ctermfg=NONE      ctermbg=NONE     cterm=NONE
+hi CursorLine   ctermfg=NONE      ctermbg=Black    cterm=NONE
+hi CursorLineNR ctermfg=DarkCyan  ctermbg=NONE     cterm=NONE
+hi Directory    ctermfg=DarkCyan  ctermbg=NONE     cterm=NONE
+hi LineNr       ctermfg=LightGray ctermbg=NONE     cterm=NONE
+hi MatchParen   ctermfg=Black     ctermbg=DarkBlue cterm=NONE
+hi Parens       ctermfg=LightGray ctermbg=NONE     cterm=NONE
+hi Pmenu        ctermfg=DarkCyan  ctermbg=Black    cterm=NONE
+hi Search       ctermfg=Black     ctermbg=DarkBlue cterm=NONE
+hi StatusLine   ctermfg=LightGray ctermbg=Black    cterm=NONE
+hi StatusLineNC ctermfg=LightGray ctermbg=Black    cterm=NONE
+hi VertSplit    ctermfg=Black     ctermbg=Black    cterm=NONE
 
 " Defaults
 hi Constant   ctermfg=DarkRed   ctermbg=NONE cterm=NONE
@@ -39,7 +108,7 @@ hi DiffText   ctermfg=Black       ctermbg=DarkBlue
 hi FoldColumn ctermfg=NONE        ctermbg=DarkGray
 hi Folded     ctermfg=DarkMagenta ctermbg=Black
 hi Function   ctermfg=DarkCyan    ctermbg=NONE
-hi SpellBad   ctermfg=LightGray        ctermbg=DarkRed
+hi SpellBad   ctermfg=LightGray   ctermbg=DarkRed
 hi String     ctermfg=DarkGreen   ctermbg=NONE
 hi Title      ctermfg=Magenta     ctermbg=NONE
 
@@ -55,76 +124,3 @@ hi htmlTag    ctermfg=LightGray ctermbg=NONE
 
 " Things that should just be normal text color
 hi javascriptBraces ctermfg=NONE
-
-
-" hi Boolean guifg=#5c8d9d ctermfg=DarkCyan
-" hi Keyword guifg=#5c8d9d ctermfg=DarkCyan
-" hi Label guifg=#5c8d9d ctermfg=DarkCyan
-
-" hi Conditional guifg=#7ba4b1 ctermfg=DarkCyan
-" hi Operator guifg=#7ba4b1 ctermfg=DarkCyan
-
-" hi ErrorMsg guibg=#6f5c9d guifg=#1d2333 ctermbg=DarkBlue ctermfg=Black
-" hi WarningMsg guibg=#6f5c9d guifg=#1d2333 ctermbg=DarkBlue ctermfg=Black
-" hi StorageClass guifg=#ffffff
-" hi Tag guifg=#ffffff ctermfg=white
-" hi Underlined guifg=#5c8d9d ctermfg=DarkCyan cterm=NONE
-
-" hi htmlSpecialChar guifg=#9d9c5c ctermfg=DarkYellow
-" hi htmlArg guifg=#6d9c5c ctermfg=DarkGreen
-" hi htmlTagName guifg=#6f5c9d ctermfg=DarkBlue
-
-" hi javaScriptNumber guifg=#9d5c5d ctermfg=DarkRed
-" hi javaScriptFunction guifg=#6d9c5c ctermfg=DarkGreen
-" hi javaScriptIdentifier guifg=#6d9c5c ctermfg=DarkGreen
-" hi javaScriptBoolean guifg=#5c8d9d ctermfg=DarkCyan
-" hi javaScriptNull guifg=#5c8d9d ctermfg=DarkCyan
-
-" hi javaScriptDeprecated guibg=#9d5c5d guifg=#1d2333 ctermbg=DarkRed ctermfg=Black
-" hi javaScriptRailsFunction 
-
-" hi PmenuSel
-" hi IncSearch
-" hi String
-" hi Float
-" hi Todo
-" hi CursorColumn
-
-" hi rubyClass 
-" hi rubyFunction 
-" hi rubyInterpolationDelimiter 
-" hi rubySymbol 
-" hi rubyConstant 
-" hi rubyStringDelimiter 
-" hi rubyBlockParameter 
-" hi rubyInstanceVariable 
-" hi rubyInclude 
-" hi rubyGlobalVariable 
-" hi rubyRegexp 
-" hi rubyRegexpDelimiter 
-" hi rubyEscape 
-" hi rubyControl 
-" hi rubyClassVariable 
-" hi rubyOperator 
-" hi rubyException 
-" hi rubyPseudoVariable 
-" hi rubyRailsUserClass 
-" hi rubyRailsARAssociationMethod 
-" hi rubyRailsARMethod 
-" hi rubyRailsRenderMethod 
-" hi rubyRailsMethod 
-" hi erubyDelimiter 
-" hi erubyComment 
-" hi erubyRailsMethod 
-" hi yamlKey 
-" hi yamlAnchor 
-" hi yamlAlias 
-" hi yamlDocumentHeader 
-" hi cssURL 
-" hi cssFunctionName 
-" hi cssColor 
-" hi cssPseudoClassId 
-" hi cssClassName 
-" hi cssValueLength 
-" hi cssCommonAttr 
-" hi cssBraces 
