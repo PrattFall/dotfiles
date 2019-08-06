@@ -33,6 +33,7 @@ hi LineNr       guifg=#4f6972 guibg=NONE
 hi MatchParen   guifg=#161d1f guibg=#7cafc2
 hi Parens       guifg=#4f6972 guibg=NONE
 hi Pmenu        guifg=#1abb9b guibg=#161d1f
+hi PmenuSel     guifg=#f8f8f8 guibg=#1abb9b
 hi Search       guifg=#161d1f guibg=#7cafc2
 hi StatusLine   guifg=#4f6972 guibg=#161d1f
 hi StatusLineNC guifg=#4f6972 guibg=#161d1f
@@ -75,22 +76,23 @@ hi javascriptBraces guifg=NONE guibg=NONE
 " ------------------------------------------------------------------------------
 
 " System and directory stuff
-hi Normal ctermfg=NONE            ctermbg=NONE     cterm=NONE
-hi Visual ctermfg=Black           ctermbg=DarkCyan cterm=NONE
+hi Normal ctermfg=NONE            ctermbg=NONE      cterm=NONE
+hi Visual ctermfg=Black           ctermbg=DarkCyan  cterm=NONE
 
-hi ColorColumn  ctermfg=NONE      ctermbg=Black    cterm=NONE
-hi Cursor       ctermfg=NONE      ctermbg=NONE     cterm=NONE
-hi CursorLine   ctermfg=NONE      ctermbg=Black    cterm=NONE
-hi CursorLineNR ctermfg=DarkCyan  ctermbg=NONE     cterm=NONE
-hi Directory    ctermfg=DarkCyan  ctermbg=NONE     cterm=NONE
-hi LineNr       ctermfg=LightGray ctermbg=NONE     cterm=NONE
-hi MatchParen   ctermfg=Black     ctermbg=DarkBlue cterm=NONE
-hi Parens       ctermfg=LightGray ctermbg=NONE     cterm=NONE
-hi Pmenu        ctermfg=DarkCyan  ctermbg=Black    cterm=NONE
-hi Search       ctermfg=Black     ctermbg=DarkBlue cterm=NONE
-hi StatusLine   ctermfg=LightGray ctermbg=Black    cterm=NONE
-hi StatusLineNC ctermfg=LightGray ctermbg=Black    cterm=NONE
-hi VertSplit    ctermfg=Black     ctermbg=Black    cterm=NONE
+hi ColorColumn  ctermfg=NONE      ctermbg=Black     cterm=NONE
+hi Cursor       ctermfg=NONE      ctermbg=NONE      cterm=NONE
+hi CursorLine   ctermfg=NONE      ctermbg=Black     cterm=NONE
+hi CursorLineNR ctermfg=DarkCyan  ctermbg=NONE      cterm=NONE
+hi Directory    ctermfg=DarkCyan  ctermbg=NONE      cterm=NONE
+hi LineNr       ctermfg=LightGray ctermbg=NONE      cterm=NONE
+hi MatchParen   ctermfg=Black     ctermbg=DarkBlue  cterm=NONE
+hi Parens       ctermfg=LightGray ctermbg=NONE      cterm=NONE
+hi Pmenu        ctermfg=DarkCyan  ctermbg=Black     cterm=NONE
+hi PmenuSel     ctermfg=White     ctermbg=DarkGreen cterm=NONE
+hi Search       ctermfg=Black     ctermbg=DarkBlue  cterm=NONE
+hi StatusLine   ctermfg=LightGray ctermbg=Black     cterm=NONE
+hi StatusLineNC ctermfg=LightGray ctermbg=Black     cterm=NONE
+hi VertSplit    ctermfg=Black     ctermbg=Black     cterm=NONE
 
 " Defaults
 hi Constant   ctermfg=DarkRed   ctermbg=NONE cterm=NONE

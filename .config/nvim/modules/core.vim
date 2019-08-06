@@ -31,3 +31,7 @@ command Q q
 
 let mapleader      = ' '
 let maplocalleader = ' '
+
+if has("win32")
+	set shell=powershell
+endif
