@@ -2,10 +2,15 @@
 	"coc.preferences.formatOnSaveFiletypes": [
 		"css",
 		"html",
-		"typescript",
 		"javascript",
+		"json",
+		"ocaml",
 		"php",
-		"json"
+		"python",
+		"scss",
+		"sql",
+		"typescript",
+		"ocaml"
 	],
 	"languageserver": {
 		"dockerfile": {
