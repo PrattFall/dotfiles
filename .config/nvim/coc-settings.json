@@ -5,7 +5,10 @@
 		"typescript",
 		"javascript",
 		"php",
-		"json"
+		"json",
+		"ocaml",
+		"clojure",
+		"rust"
 	],
 	"languageserver": {
 		"dockerfile": {

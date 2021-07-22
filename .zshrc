@@ -14,14 +14,14 @@ export LESSHISTFILE="$XDG_CONFIG_HOME"/less/history
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
 
-zstyle :compinstall filename '/home/$username/.zshrc'
+# zstyle :compinstall filename '/home/$username/.zshrc'
 
-# Completion stuff
-autoload -Uz compinit
-compinit
+# # Completion stuff
+# autoload -Uz compinit
+# compinit
 
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+# zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+# zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Important variables, I swear!
 export EDITOR=nvim

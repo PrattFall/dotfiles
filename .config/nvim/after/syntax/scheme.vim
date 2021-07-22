@@ -8,3 +8,4 @@ hi! link Conceal Operator
 
 setlocal conceallevel=1
 setlocal concealcursor=v
+set expandtab
