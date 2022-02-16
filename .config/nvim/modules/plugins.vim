@@ -20,6 +20,9 @@ source $HOME/.config/nvim/modules/plugins/vim-markdown.vim
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell'}
 Plug 'cakebaker/scss-syntax.vim', { 'for' : 'scss' }
 Plug 'hail2u/vim-css3-syntax',    { 'for' : 'css' }
+Plug 'pantharshit00/vim-prisma'
+
+Plug 'jceb/vim-orgmode'
 
 " JavaScript
 Plug 'othree/javascript-libraries-syntax.vim', { 'for' : 'javascript' }
@@ -28,5 +31,8 @@ Plug 'othree/yajs.vim',                        { 'for' : 'javascript' }
 " Typescript
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
+
+Plug 'lark-parser/vim-lark-syntax'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()

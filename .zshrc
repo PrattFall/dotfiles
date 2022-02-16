@@ -6,6 +6,7 @@ bindkey -e
 
 export PATH=$HOME/Library/Haskell/bin:$PATH
 export PATH=$HOME/.config/composer/vendor/bin:$PATH
+export PATH=$HOME/.local/share/nvim/lsp_servers:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # XDG support to unclutter my home folder (also for neovim)
@@ -41,7 +42,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias ls="ls --color=always --human-readable"
 alias grep="grep --color=auto"
-alias less="less --quiet"
+alias less="less --quiet -r"
 alias battery="acpi"
 alias open="xdg-open"
 
@@ -50,3 +51,12 @@ source ~/.machine_profile.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+if [ -e /home/bpratt/.nix-profile/etc/profile.d/nix.sh ]; then . /home/bpratt/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+echo 'eval "$(pyenv init --path)"' >>~/.profile
+
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+eval "$(pyenv init -)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

@@ -11,7 +11,8 @@
     "rust",
     "scss",
     "sql",
-    "typescript"
+    "typescript",
+    "vue"
   ],
   "languageserver": {
     "dockerfile": {
@@ -24,5 +25,9 @@
       "args": ["--stdio"],
       "filetypes": ["ocaml", "reason"]
     }
-  }
+  },
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true,
+  "python.pythonPath": "/home/bpratt/.pyenv/shims/python3",
+  "npm.binPath": "/home/bpratt/n/bin/npm"
 }

@@ -8,19 +8,6 @@ syn match Parens /[(){}\[\]]/
 " GUI
 " ------------------------------------------------------------------------------
 
-let GuiBackground = '#222d31'
-let GuiForeground = '#d8d8d8'
-let GuiBlack      = '#161d1f'
-let GuiRed        = '#ab4642'
-let GuiGreen      = '#6d956d'
-let GuiGreenLight = '#7bb97b'
-let GuiYellow     = '#f7ca88'
-let GuiBlue       = '#7cafc2'
-let GuiMagenta    = '#ba8baf'
-let GuiCyan       = '#1abb9b'
-let GuiWhite      = '#4f6972'
-let GuiWhiteLight = '#f8f8f8'
-
 hi Normal       guifg=#d8d8d8 guibg=#222d31
 hi Visual       guifg=#161d1f guibg=#1abb9b
 
@@ -93,6 +80,7 @@ hi Search       ctermfg=Black     ctermbg=DarkBlue  cterm=NONE
 hi StatusLine   ctermfg=LightGray ctermbg=Black     cterm=NONE
 hi StatusLineNC ctermfg=LightGray ctermbg=Black     cterm=NONE
 hi VertSplit    ctermfg=Black     ctermbg=Black     cterm=NONE
+hi SignColumn   ctermfg=NONE      ctermbg=NONE      cterm=NONE
 
 " Defaults
 hi Constant   ctermfg=DarkRed   ctermbg=NONE cterm=NONE
@@ -126,3 +114,14 @@ hi htmlTag    ctermfg=LightGray ctermbg=NONE
 
 " Things that should just be normal text color
 hi javascriptBraces ctermfg=NONE
+
+" GitSigns
+hi GitSignsAdd      ctermfg=Green      ctermbg=NONE cterm=NONE
+hi GitSignsAddLn    ctermfg=Green      ctermbg=NONE cterm=NONE
+hi GitSignsAddNr    ctermfg=Green      ctermbg=NONE cterm=NONE
+hi GitSignsChange   ctermfg=DarkYellow ctermbg=NONE cterm=NONE
+hi GitSignsChangeLn ctermfg=DarkYellow ctermbg=NONE cterm=NONE
+hi GitSignsChangeNr ctermfg=DarkYellow ctermbg=NONE cterm=NONE
+hi GitSignsDelete   ctermfg=Red        ctermbg=NONE cterm=NONE
+hi GitSignsDeleteLn ctermfg=Red        ctermbg=NONE cterm=NONE
+hi GitSignsDeleteNr ctermfg=Red        ctermbg=NONE cterm=NONE
