@@ -1,0 +1,51 @@
+window:
+  padding:
+    x: 10
+    y: 7
+
+font:
+  normal:
+    family: furacode nerd font
+    style: Regular
+
+  bold:
+    family: furacode nerd font
+    style: Bold
+
+  italic:
+    family: furacode nerd font
+    style: Italic
+
+  bold_italic:
+    family: furacode nerd font
+    style: Bold Italic
+
+  size: 11
+
+colors:
+  # Default colors
+  primary:
+    background: '0x222d31'
+    foreground: '0xd8d8d8'
+
+  # Normal colors
+  normal:
+    black:   '0x161d1f'
+    red:     '0xab4642'
+    green:   '0x6d956d'
+    yellow:  '0xf7ca88'
+    blue:    '0x7cafc2'
+    magenta: '0xba8baf'
+    cyan:    '0x1abb9b'
+    white:   '0x4f6972'
+
+  # Bright colors
+  bright:
+    black:   '0x161d1f'
+    red:     '0xab4642'
+    green:   '0x7bb97b'
+    yellow:  '0xf7ca88'
+    blue:    '0x7cafc2'
+    magenta: '0xba8baf'
+    cyan:    '0x1abb9b'
+    white:   '0xf8f8f8'
