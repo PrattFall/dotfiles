@@ -51,12 +51,6 @@ source ~/.machine_profile.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-if [ -e /home/bpratt/.nix-profile/etc/profile.d/nix.sh ]; then . /home/bpratt/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-echo 'eval "$(pyenv init --path)"' >>~/.profile
-
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-eval "$(pyenv init -)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform

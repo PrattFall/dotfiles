@@ -5,63 +5,6 @@ set t_Co=256
 
 syn match Parens /[(){}\[\]]/
 
-" GUI
-" ------------------------------------------------------------------------------
-
-hi Normal       guifg=#d8d8d8 guibg=#222d31
-hi Visual       guifg=#161d1f guibg=#1abb9b
-
-hi ColorColumn  guifg=NONE    guibg=#161d1f
-hi Cursor       guifg=NONE    guibg=NONE
-hi CursorLine   guifg=NONE    guibg=#161d1f
-hi CursorLineNR guifg=#1abb9b guibg=NONE
-hi Directory    guifg=#1abb9b guibg=NONE
-hi LineNr       guifg=#4f6972 guibg=NONE
-hi MatchParen   guifg=#161d1f guibg=#7cafc2
-hi Parens       guifg=#4f6972 guibg=NONE
-hi Pmenu        guifg=#1abb9b guibg=#161d1f
-hi PmenuSel     guifg=#f8f8f8 guibg=#1abb9b
-hi Search       guifg=#161d1f guibg=#7cafc2
-hi StatusLine   guifg=#4f6972 guibg=#161d1f
-hi StatusLineNC guifg=#4f6972 guibg=#161d1f
-hi VertSplit    guifg=#161d1f guibg=#161d1f
-
-" Defaults
-hi Constant     guifg=#ab4642 guibg=#222d31
-hi Identifier   guifg=#7bb97b guibg=#222d31
-hi Keyword      guifg=#1abb9b guibg=#222d31
-hi PreProc      guifg=#ba8baf guibg=#222d31
-hi Statement    guifg=#7cafc2 guibg=#222d31
-hi Type         guifg=#1abb9b guibg=#222d31
-
-" Things that break from defaults
-hi DiffAdd      guifg=#6d956d guibg=#161d1f
-hi DiffChange   guifg=#7cafc2 guibg=#161d1f
-hi DiffDelete   guifg=#ab4642 guibg=#161d1f
-hi DiffText     guifg=#161d1f guibg=#7cafc2
-hi FoldColumn   guifg=NONE    guibg=#4f6972
-hi Folded       guifg=#ba8baf guibg=#161d1f
-hi Function     guifg=#1abb9b guibg=NONE
-hi SpellBad     guifg=#4f6972 guibg=#ab4642
-hi String       guifg=#6d956d guibg=NONE
-hi Title        guifg=#ba8baf guibg=NONE
-
-" Things that should be mostly hidden
-hi Comment    guifg=#4f6972 guibg=NONE
-hi Define     guifg=#4f6972 guibg=NONE
-hi NonText    guifg=#4f6972 guibg=NONE
-hi Special    guifg=#4f6972 guibg=NONE
-hi SpecialKey guifg=#4f6972 guibg=NONE
-hi Tag        guifg=#4f6972 guibg=NONE
-hi htmlEndTag guifg=#4f6972 guibg=NONE
-hi htmlTag    guifg=#4f6972 guibg=NONE
-
-" Things that should just be normal text color
-hi javascriptBraces guifg=NONE guibg=NONE
-
-" TERMINAL
-" ------------------------------------------------------------------------------
-
 " System and directory stuff
 hi Normal ctermfg=NONE            ctermbg=NONE      cterm=NONE
 hi Visual ctermfg=Black           ctermbg=DarkCyan  cterm=NONE
@@ -125,3 +68,26 @@ hi GitSignsChangeNr ctermfg=DarkYellow ctermbg=NONE cterm=NONE
 hi GitSignsDelete   ctermfg=Red        ctermbg=NONE cterm=NONE
 hi GitSignsDeleteLn ctermfg=Red        ctermbg=NONE cterm=NONE
 hi GitSignsDeleteNr ctermfg=Red        ctermbg=NONE cterm=NONE
+
+" treesitter
+hi TSNote            ctermbg=NONE ctermfg=Green     cterm=bold
+hi TSWarning         ctermbg=NONE ctermfg=Yellow    cterm=underline
+hi TSDanger          ctermbg=NONE ctermfg=Red       cterm=underline
+hi TSConstructor     ctermbg=NONE ctermfg=Magenta   cterm=NONE
+hi TSField           ctermbg=NONE ctermfg=Green     cterm=NONE
+hi TSKeyword         ctermbg=NONE ctermfg=Blue      cterm=NONE
+hi TSKeywordFunction ctermbg=NONE ctermfg=Cyan      cterm=NONE
+hi TSLabel           ctermbg=NONE ctermfg=LightGray cterm=NONE
+hi TSOperator        ctermbg=NONE ctermfg=NONE      cterm=NONE
+hi TSParameter       ctermbg=NONE ctermfg=NONE      cterm=NONE
+hi TSProperty        ctermbg=NONE ctermfg=Green     cterm=NONE
+hi TSPunctDelimiter  ctermbg=NONE ctermfg=LightGray cterm=NONE
+hi TSPunctBracket    ctermbg=NONE ctermfg=LightGray cterm=NONE
+hi TSStringRegex     ctermbg=NONE ctermfg=Yellow    cterm=NONE
+hi TSStringEscape    ctermbg=NONE ctermfg=LightGray cterm=NONE
+hi TSVariable        ctermbg=NONE ctermfg=NONE      cterm=bold
+hi TSVariableBuiltIn ctermbg=NONE ctermfg=Blue      cterm=bold
+hi TSTextReference   ctermbg=NONE ctermfg=Cyan      cterm=NONE
+hi TSTag             ctermbg=NONE ctermfg=Magenta   cterm=NONE
+hi TSTagDelimiter    ctermbg=NONE ctermfg=LightGray cterm=NONE
+hi TSStrike          ctermbg=NONE ctermfg=LightGray cterm=NONE
