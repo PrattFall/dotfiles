@@ -1,54 +1,107 @@
-local lsp_installer = require('nvim-lsp-installer')
+local lspconfig = require "lspconfig"
+local lspinstaller = require "nvim-lsp-installer"
+local ts_utils = require "nvim-treesitter.ts_utils"
+local lsp_signature = require "lsp_signature"
 
-local binding_opts = {noremap = true, silent = true}
+lspinstaller.setup {}
 
-local function on_attach(_, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+require("nvim-lsp-installer").setup {
+	ensure_installed = { "sumneko_lua", "jsonls", "yamlls" },
+	automatic_installation = false,
+	log_level = vim.log.levels.DEBUG,
+	ui = {
+		icons = {
+			server_installed = "",
+			server_pending = "",
+			server_uninstalled = "",
+		},
+	},
+}
 
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', binding_opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', binding_opts)
+local function create_capabilities(_)
+	return require('cmp_nvim_lsp').update_capabilities(
+		vim.lsp.protocol.make_client_capabilities()
+	)
+end
+
+local function goto_prev_error()
+	vim.diagnostic.goto_prev { severity = "Error" }
+end
+
+local function goto_next_error()
+	vim.diagnostic.goto_next { severity = "Error" }
+end
+
+---@param bufnr number
+local function buf_set_keymaps(bufnr)
+	local function buf_set_keymap(mode, lhs, rhs)
+		vim.keymap.set(mode, lhs, rhs, {
+			buffer = bufnr,
+			silent = true,
+			noremap = true
+		})
+	end
+
+	buf_set_keymap('n', 'gD',         vim.lsp.buf.declaration)
+	buf_set_keymap('n', 'gd',         vim.lsp.buf.definition)
+	buf_set_keymap('n', 'K',          vim.lsp.buf.hover)
+	buf_set_keymap('n', 'gi',         vim.lsp.buf.implementation)
+	buf_set_keymap('n', '<C-k>',      vim.lsp.buf.signature_help)
+	buf_set_keymap('n', '<leader>wa', vim.lsp.buf.add_workspace_folder)
+	buf_set_keymap('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder)
+	buf_set_keymap('n', '<leader>D',  vim.lsp.buf.type_definition)
+	buf_set_keymap('n', '<leader>rn', vim.lsp.buf.rename)
+	buf_set_keymap('n', '<leader>ca', vim.lsp.buf.code_action)
+	buf_set_keymap('n', 'gr',         vim.lsp.buf.references)
+	buf_set_keymap('n', '<leader>f',  vim.lsp.buf.formatting)
+
+	-- Diagnostics
+
+	for _, mode in pairs { "n", "v" } do
+		buf_set_keymap(mode, "[e", goto_prev_error)
+		buf_set_keymap(mode, "]e", goto_next_error)
+		buf_set_keymap(mode, "[E", vim.diagnostic.goto_prev)
+		buf_set_keymap(mode, "]E", vim.diagnostic.goto_next)
+	end
+	buf_set_keymap("n", "].", vim.diagnostic.open_float)
+end
+
+local function common_on_attach(client, bufnr)
+	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+	buf_set_keymaps(bufnr)
+
+	if client.config.flags then
+		client.config.flags.allow_incremental_sync = true
+	end
+
+	lsp_signature.on_attach({
+		bind = true,
+		floating_window = false,
+		hint_prefix = "",
+		hint_scheme = "Comment",
+	}, bufnr)
 end
 
 local server_options = {
 	["sumneko_lua"] = function(opts)
 		opts.settings = {
 			Lua = {
-				diagnostics = {globals = {'vim', 'packer_bootstrap'}},
-				workspace = {
-					library = vim.api.nvim_get_runtime_file("", true),
-					checkThirdParty = false
-				}
+				diagnostics = { globals = { 'vim', 'packer_bootstrap' } },
 			}
 		}
 	end
 }
 
-lsp_installer.on_server_ready(function(server)
-	local capabilities = require('cmp_nvim_lsp').update_capabilities(
-		vim.lsp.protocol.make_client_capabilities()
-	)
-
+for _, server in ipairs(lspinstaller.get_installed_servers()) do
 	local opts = {
-		capabilities = capabilities,
-		on_attach = on_attach
+		on_attach = common_on_attach,
+		capabilities = create_capabilities()
 	}
 
 	if server_options[server.name] then
 		server_options[server.name](opts)
 	end
 
-	server:setup(opts)
-end)
+	lspconfig[server.name].setup(opts)
+end

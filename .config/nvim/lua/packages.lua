@@ -12,6 +12,8 @@ require('packer').startup(function(use)
 	use 'L3MON4D3/LuaSnip'
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/nvim-lsp-installer'
+	use 'ray-x/lsp_signature.nvim'
+	use 'jose-elias-alvarez/null-ls.nvim'
 	use {
 		'numToStr/Comment.nvim',
 		config = function ()

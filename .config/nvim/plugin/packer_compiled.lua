@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/home/hakase/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/hakase/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/hakase/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hakase/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/scrooloose/nerdtree"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/hakase/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
