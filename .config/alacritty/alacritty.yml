@@ -20,38 +20,38 @@ font:
     family: furacode nerd font
     style: Bold Italic
 
-  size: 11
+  size: 10
 
 
 colors:
   # Default colors
   primary:
-    background: '0x222d31'
-    foreground: '0xd8d8d8'
+    background: '0x25242c'
+    foreground: '0xc2bcc6'
 
   # Cursor is reversed primary
   cursor:
-    text: '0x222d31'
-    cursor: '0xd8d8d8'
+    text: '0x25242c'
+    cursor: '0xc2bcc6'
 
   # Normal colors
   normal:
-    black:   '0x161d1f'
-    red:     '0xab4642'
-    green:   '0x6d956d'
-    yellow:  '0xf7ca88'
-    blue:    '0x7cafc2'
-    magenta: '0xba8baf'
-    cyan:    '0x1abb9b'
-    white:   '0x4f6972'
+    black:   '0x1c1a21'
+    red:     '0xf55897'
+    green:   '0x34c294'
+    yellow:  '0xffaa49'
+    blue:    '0x5867f5'
+    magenta: '0xb05c90'
+    cyan:    '0x17a5cf'
+    white:   '0x9a8ea6'
 
   # Bright colors
   bright:
-    black:   '0x161d1f'
-    red:     '0xab4642'
-    green:   '0x7bb97b'
-    yellow:  '0xf7ca88'
-    blue:    '0x7cafc2'
-    magenta: '0xba8baf'
-    cyan:    '0x1abb9b'
-    white:   '0xf8f8f8'
+    black:   '0x2d2a36'
+    red:     '0xf77bb2'
+    green:   '0x5cbf9e'
+    yellow:  '0xe8b882'
+    blue:    '0x6b74c7'
+    magenta: '0xd97ec0'
+    cyan:    '0x86eef0'
+    white:   '0xc4b5d4'

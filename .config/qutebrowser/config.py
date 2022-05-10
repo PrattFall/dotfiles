@@ -13,6 +13,10 @@ xresources = read_xresources('*')
 
 # Defaults
 c.url.start_pages = ["https://www.google.com"]
+c.url.searchengines = {
+    "DEFAULT": "https://google.com/search?hl=en&q={}",
+    "!yt": "https://www.youtube.com/results?search_query={}"
+}
 c.tabs.background = True
 
 # Bindings

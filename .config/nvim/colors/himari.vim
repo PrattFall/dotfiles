@@ -34,9 +34,9 @@ hi Statement  ctermfg=DarkBlue  ctermbg=NONE cterm=NONE
 hi Type       ctermfg=DarkCyan  ctermbg=NONE cterm=NONE
 
 " Things that break from defaults
-hi DiffAdd    ctermfg=Green       ctermbg=Black
-hi DiffChange ctermfg=Blue        ctermbg=Black
-hi DiffDelete ctermfg=Red         ctermbg=Black
+hi diffadd    ctermfg=green       ctermbg=black
+hi diffchange ctermfg=blue        ctermbg=black
+hi diffdelete ctermfg=red         ctermbg=black
 hi DiffText   ctermfg=Black       ctermbg=DarkBlue
 hi FoldColumn ctermfg=NONE        ctermbg=DarkGray
 hi Folded     ctermfg=DarkMagenta ctermbg=Black
