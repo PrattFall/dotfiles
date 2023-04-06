@@ -1,12 +1,11 @@
 local lspconfig = require "lspconfig"
 local lspinstaller = require "nvim-lsp-installer"
-local ts_utils = require "nvim-treesitter.ts_utils"
 local lsp_signature = require "lsp_signature"
 
 lspinstaller.setup {}
 
 require("nvim-lsp-installer").setup {
-	ensure_installed = { "sumneko_lua", "jsonls", "yamlls" },
+	ensure_installed = { "jsonls", "yamlls" },
 	automatic_installation = false,
 	log_level = vim.log.levels.DEBUG,
 	ui = {
@@ -19,9 +18,7 @@ require("nvim-lsp-installer").setup {
 }
 
 local function create_capabilities(_)
-	return require('cmp_nvim_lsp').update_capabilities(
-		vim.lsp.protocol.make_client_capabilities()
-	)
+	return require('cmp_nvim_lsp').default_capabilities()
 end
 
 local function goto_prev_error()
@@ -42,6 +39,12 @@ local function buf_set_keymaps(bufnr)
 		})
 	end
 
+	local function async_format()
+		vim.lsp.buf.format {
+			async = true
+		}
+	end
+
 	buf_set_keymap('n', 'gD',         vim.lsp.buf.declaration)
 	buf_set_keymap('n', 'gd',         vim.lsp.buf.definition)
 	buf_set_keymap('n', 'K',          vim.lsp.buf.hover)
@@ -53,7 +56,7 @@ local function buf_set_keymaps(bufnr)
 	buf_set_keymap('n', '<leader>rn', vim.lsp.buf.rename)
 	buf_set_keymap('n', '<leader>ca', vim.lsp.buf.code_action)
 	buf_set_keymap('n', 'gr',         vim.lsp.buf.references)
-	buf_set_keymap('n', '<leader>f',  vim.lsp.buf.formatting)
+	buf_set_keymap('n', '<leader>f',  async_format)
 
 	-- Diagnostics
 
@@ -84,13 +87,13 @@ local function common_on_attach(client, bufnr)
 end
 
 local server_options = {
-	["sumneko_lua"] = function(opts)
-		opts.settings = {
-			Lua = {
-				diagnostics = { globals = { 'vim', 'packer_bootstrap' } },
-			}
-		}
-	end
+	-- ["sumneko_lua"] = function(opts)
+	-- 	opts.settings = {
+	-- 		Lua = {
+	-- 			diagnostics = { globals = { 'vim', 'packer_bootstrap' } },
+	-- 		}
+	-- 	}
+	-- end
 }
 
 for _, server in ipairs(lspinstaller.get_installed_servers()) do

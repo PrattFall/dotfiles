@@ -55,5 +55,6 @@ require('cmp_config')
 require('treesitter_config')
 require('lualine_config')
 require('gitsigns_config')
+require('terminal_toggle')
 
 map('n', '<Leader>n', ':NERDTreeToggle<cr>')

@@ -25,7 +25,7 @@ require('packer').startup(function(use)
 	use 'nvim-treesitter/nvim-treesitter-textobjects'
 	use {'lewis6991/gitsigns.nvim', requires= {'nvim-lua/plenary.nvim'}}
 	use {'renerocksai/telekasten.nvim', requires= {'nvim-telescope/telescope.nvim'}}
-	use 'scrooloose/nerdtree'
+	use 'habamax/vim-godot'
 
 	if packer_bootstrap then
 		require('packer').sync()
