@@ -11,7 +11,11 @@ require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'L3MON4D3/LuaSnip'
 	use 'neovim/nvim-lspconfig'
-	use 'williamboman/nvim-lsp-installer'
+	use {
+		'williamboman/mason.nvim',
+		run = ':MasonUpdate'
+	}
+	use 'williamboman/mason-lspconfig.nvim'
 	use 'ray-x/lsp_signature.nvim'
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use {
