@@ -1,37 +1,70 @@
-local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-	vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath
+	})
 end
 
-require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/nvim-cmp'
-	use 'saadparwaiz1/cmp_luasnip'
-	use 'L3MON4D3/LuaSnip'
-	use 'neovim/nvim-lspconfig'
-	use {
-		'williamboman/mason.nvim',
-		run = ':MasonUpdate'
-	}
-	use 'williamboman/mason-lspconfig.nvim'
-	use 'ray-x/lsp_signature.nvim'
-	use 'jose-elias-alvarez/null-ls.nvim'
-	use {
-		'numToStr/Comment.nvim',
-		config = function ()
-			require('Comment').setup()
-		end
-	}
-	use 'nvim-lualine/lualine.nvim'
-	use 'nvim-treesitter/nvim-treesitter'
-	use 'nvim-treesitter/nvim-treesitter-textobjects'
-	use {'lewis6991/gitsigns.nvim', requires= {'nvim-lua/plenary.nvim'}}
-	use {'renerocksai/telekasten.nvim', requires= {'nvim-telescope/telescope.nvim'}}
-	use 'habamax/vim-godot'
+vim.opt.rtp:prepend(lazypath);
 
-	if packer_bootstrap then
-		require('packer').sync()
-	end
-end)
+require("lazy").setup({
+	"wbthomason/packer.nvim",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/nvim-cmp",
+	"saadparwaiz1/cmp_luasnip",
+	"L3MON4D3/LuaSnip",
+	"neovim/nvim-lspconfig",
+	{
+		"williamboman/mason.nvim",
+		run = ":MasonUpdate"
+	},
+	"williamboman/mason-lspconfig.nvim",
+	"ray-x/lsp_signature.nvim",
+	"nvimtools/none-ls.nvim",
+	{
+		"numToStr/Comment.nvim",
+		lazy = false
+	},
+	"nvim-lualine/lualine.nvim",
+	"nvim-treesitter/nvim-treesitter",
+	"nvim-treesitter/nvim-treesitter-textobjects",
+	{
+		"lewis6991/gitsigns.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" }
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.5",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	"habamax/vim-godot",
+	{
+		"epwalsh/obsidian.nvim",
+		version = "*",
+		lazy = true,
+		ft = "markdown",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {
+			workspaces = {
+				{
+					name = "personal",
+					path = "~/vaults/personal"
+				},
+				{
+					name = "work",
+					path = "~/vaults/work"
+				}
+			}
+		}
+	}
+})
