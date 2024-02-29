@@ -57,7 +57,6 @@ require('lualine_config')
 require('gitsigns_config')
 require('terminal_toggle')
 
-map('n', '<Leader>n', ':NERDTreeToggle<cr>')
 map('n', '<Leader>sf', ':Telescope find_files<cr>')
 
 map('n', '<Leader>ol', ':ObsidianFollowLink<cr>')

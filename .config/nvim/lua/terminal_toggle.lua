@@ -17,7 +17,7 @@ local function LuaTerminalOpen()
 			lua_terminal_job_id = vim.fn.termopen(os.getenv("SHELL"))
 		end
 
-		vim.api.nvim_command("silent file Terminal 1")
+		vim.api.nvim_command("silent file Terminal_1")
 		lua_terminal_window = vim.fn.win_getid()
 		lua_terminal_buffer = vim.fn.bufnr('%')
 		vim.opt.buflisted = false
@@ -26,7 +26,7 @@ local function LuaTerminalOpen()
 			vim.api.nvim_command("sp")
 			vim.api.nvim_command("wincmd L")
 			vim.api.nvim_command("vertical resize " .. lua_terminal_window_size)
-			vim.api.nvim_command("buffer Terminal 1")
+			vim.api.nvim_command("buffer Terminal_1")
 			lua_terminal_window = vim.fn.win_getid()
 		end
 	end
