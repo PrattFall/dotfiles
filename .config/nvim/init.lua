@@ -52,12 +52,13 @@ vim.cmd [[command Q q]]
 require('packages')
 require('lsp_config')
 require('cmp_config')
-require('treesitter_config')
-require('lualine_config')
 require('gitsigns_config')
 require('terminal_toggle')
 
 map('n', '<Leader>sf', ':Telescope find_files<cr>')
+map('n', '<Leader>sg', ':Telescope live_grep<cr>')
 
 map('n', '<Leader>ol', ':ObsidianFollowLink<cr>')
 map('n', '<Leader>os', ':ObsidianSearch<cr>')
+
+vim.cmd [[let g:fsharp#lsp_codelens = 0]]

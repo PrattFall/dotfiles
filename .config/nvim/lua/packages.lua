@@ -1,38 +1,45 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable",
-		lazypath
-	})
-end
+  vim.fn.system({
+    "git",
+    "clone",
 
-vim.opt.rtp:prepend(lazypath);
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"wbthomason/packer.nvim",
-	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	{
+		"numToStr/Comment.nvim",
+		config = function ()
+		require('Comment').setup({})
+		end,
+		lazy = false
+	},
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
 	"neovim/nvim-lspconfig",
-	{
-		"williamboman/mason.nvim",
-		run = ":MasonUpdate"
-	},
-	"williamboman/mason-lspconfig.nvim",
 	"ray-x/lsp_signature.nvim",
 	"nvimtools/none-ls.nvim",
 	{
-		"numToStr/Comment.nvim",
-		lazy = false
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("nvim-treesitter.configs").setup {
+				ensure_installed = { "c", "lua", "rust" },
+				highlight = { enable = true },
+				rainbow = { enable = false }
+			}
+		end
 	},
-	"nvim-lualine/lualine.nvim",
-	"nvim-treesitter/nvim-treesitter",
 	"nvim-treesitter/nvim-treesitter-textobjects",
 	{
 		"lewis6991/gitsigns.nvim",
@@ -43,6 +50,13 @@ require("lazy").setup({
 		tag = "0.1.5",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
+		"ionide/ionide-vim",
+		ft = "fsharp",
+		dependencies = {
+			"neovim/nvim-lspconfig"
 		},
 	},
 	"habamax/vim-godot",
