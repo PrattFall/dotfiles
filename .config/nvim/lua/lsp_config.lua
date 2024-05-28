@@ -64,6 +64,7 @@ vim.api.nvim_create_autocmd("User", {
 		buf_set_keymap("n", "<C-K>", vim.lsp.buf.signature_help)
 
 		buf_set_keymap("n", "<leader>D", vim.lsp.buf.type_definition)
+
 		buf_set_keymap("n", "<leader>f", async_format)
 
 		buf_set_keymap("n", "<leader>wa", vim.lsp.buf.add_workspace_folder)
