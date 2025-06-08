@@ -38,3 +38,4 @@ reliably use either that often anymore
 - Setup script?
 - Eventually learn [Nix](https://nixos.org/)
 - Fish config? (I don't really maintain it between machines at the moment)
+- Neovim configuration cleanup
