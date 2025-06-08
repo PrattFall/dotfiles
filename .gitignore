@@ -1,6 +1,4 @@
 userstyles/
-.emacs
-.emacs.d/
 .config/nvim/swap/*
 .config/nvim/undo/*
 .config/nvim/plugged/*
@@ -14,4 +12,3 @@ userstyles/
 .themes/
 .ncmpcpp
 .mpd
-.oh-my-zsh

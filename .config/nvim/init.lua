@@ -4,14 +4,13 @@ end
 
 vim.cmd [[
 	filetype indent on
-	color himari
+	color catppuccin_frappe
 ]]
 
 map('t', '<Esc>', '<C-\\><C-n>')
 
 vim.o.syntax = "on"
 
-vim.o.expandtab = false
 vim.o.hidden = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -50,15 +49,8 @@ vim.cmd [[command W w]]
 vim.cmd [[command Q q]]
 
 require('packages')
-require('lsp_config')
-require('cmp_config')
 require('gitsigns_config')
 require('terminal_toggle')
 
 map('n', '<Leader>sf', ':Telescope find_files<cr>')
 map('n', '<Leader>sg', ':Telescope live_grep<cr>')
-
-map('n', '<Leader>ol', ':ObsidianFollowLink<cr>')
-map('n', '<Leader>os', ':ObsidianSearch<cr>')
-
-vim.cmd [[let g:fsharp#lsp_codelens = 0]]
