@@ -25,6 +25,13 @@ require("lazy").setup({
 		},
 	},
 	{
+		"seblyng/roslyn.nvim",
+		ft = "cs",
+		opts = {
+			-- your configuration comes here; leave empty for default settings
+		},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
@@ -56,10 +63,27 @@ require("lazy").setup({
 			})
 
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
+			require("mason").setup({
+				registries = {
+					"github:mason-org/mason-registry",
+					"github:Crashdummyy/mason-registry",
+				},
+			})
 
 			local servers = {
 				pyright = {},
 				rust_analyzer = {},
+				roslyn = {
+					settings = {
+						["csharp|inlay_hints"] = {
+							csharp_enable_inlay_hints_for_implicit_object_creation = true,
+							csharp_enable_inlay_hints_for_implicit_variable_types = true,
+						},
+						["csharp|code_lens"] = {
+							dotnet_enable_references_code_lens = true,
+						},
+					},
+				},
 				ts_ls = {},
 				lua_ls = {
 					settings = {
@@ -70,7 +94,7 @@ require("lazy").setup({
 						},
 					},
 				},
-				eslint = {}
+				eslint = {},
 			}
 
 			local ensure_installed = vim.tbl_keys(servers or {})
@@ -181,6 +205,7 @@ require("lazy").setup({
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"c",
+					"c_sharp",
 					"lua",
 					"rust",
 					"typescript",
@@ -190,6 +215,10 @@ require("lazy").setup({
 				},
 				highlight = { enable = true },
 				rainbow = { enable = false },
+				modules = {},
+				sync_install = false,
+				ignore_install = {},
+				auto_install = true,
 			})
 		end,
 	},
@@ -205,11 +234,11 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 		},
 	},
-	{
-		"ionide/ionide-vim",
-		ft = "fsharp",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-		},
-	},
+	-- {
+	-- 	"ionide/ionide-vim",
+	-- 	ft = "fsharp",
+	-- 	dependencies = {
+	-- 		"neovim/nvim-lspconfig",
+	-- 	},
+	-- },
 })
