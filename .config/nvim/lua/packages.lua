@@ -234,11 +234,11 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 		},
 	},
-	-- {
-	-- 	"ionide/ionide-vim",
-	-- 	ft = "fsharp",
-	-- 	dependencies = {
-	-- 		"neovim/nvim-lspconfig",
-	-- 	},
-	-- },
+	{
+		"ionide/ionide-vim",
+		ft = "fsharp",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+	},
 })
