@@ -25,6 +25,34 @@ require("lazy").setup({
 		},
 	},
 	{
+		"nvim-telekasten/telekasten.nvim",
+		dependencies = {"nvim-telescope/telescope.nvim"},
+		ft = "markdown",
+		config = function()
+			require("telekasten").setup({
+				vaults = {
+					default = {
+						home = vim.fn.expand("~/projects/note-vaults/journal"),
+					},
+					deadlock = {
+						home = vim.fn.expand("~/projects/note-vaults/deadlock"),
+					},
+					hackstory = {
+						home = vim.fn.expand("~/projects/note-vaults/hack-story"),
+					}
+				}
+			})
+			-- Launch panel if nothing is typed after <leader>z
+			vim.keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>")
+
+			-- Most used functions
+			vim.keymap.set("n", "<leader><CR>", "<cmd>Telekasten toggle_todo<CR>")
+
+			-- Call insert link automatically when we start typing a link
+			vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
+		end
+	},
+	{
 		"seblyng/roslyn.nvim",
 		ft = "cs",
 		opts = {
