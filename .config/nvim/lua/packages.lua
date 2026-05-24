@@ -25,39 +25,14 @@ require("lazy").setup({
 		},
 	},
 	{
-		"nvim-telekasten/telekasten.nvim",
-		dependencies = {"nvim-telescope/telescope.nvim"},
-		ft = "markdown",
-		config = function()
-			require("telekasten").setup({
-				vaults = {
-					default = {
-						home = vim.fn.expand("~/projects/note-vaults/journal"),
-					},
-					deadlock = {
-						home = vim.fn.expand("~/projects/note-vaults/deadlock"),
-					},
-					hackstory = {
-						home = vim.fn.expand("~/projects/note-vaults/hack-story"),
-					}
-				}
-			})
-			-- Launch panel if nothing is typed after <leader>z
-			vim.keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>")
-
-			-- Most used functions
-			vim.keymap.set("n", "<leader><CR>", "<cmd>Telekasten toggle_todo<CR>")
-
-			-- Call insert link automatically when we start typing a link
-			vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
-		end
-	},
-	{
 		"seblyng/roslyn.nvim",
 		ft = "cs",
-		opts = {
-			-- your configuration comes here; leave empty for default settings
-		},
+		opts = {},
+	},
+	{
+		"ibhagwan/fzf-lua",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -78,11 +53,11 @@ require("lazy").setup({
 
 					map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
 					map("gra", vim.lsp.buf.code_action, "Go to code Action", { "n", "x" })
-					map("grr", require("telescope.builtin").lsp_references, "Goto References")
-					map("gri", require("telescope.builtin").lsp_implementations, "Goto Implementation")
-					map("grd", require("telescope.builtin").lsp_definitions, "Goto Definition")
+					-- map("grr", require("telescope.builtin").lsp_references, "Goto References")
+					-- map("gri", require("telescope.builtin").lsp_implementations, "Goto Implementation")
+					-- map("grd", require("telescope.builtin").lsp_definitions, "Goto Definition")
 					map("grD", vim.lsp.buf.declaration, "Goto Declaration")
-					map("grt", require("telescope.builtin").lsp_type_definitions, "Type Definition")
+					-- map("grt", require("telescope.builtin").lsp_type_definitions, "Type Definition")
 					map("<leader>h", vim.lsp.buf.hover, "Force Hover")
 					map("<leader><CR>", vim.diagnostic.open_float, "Diagnostic Info")
 					map("<leader>[", "<cmd>lua vim.diagnostic.get_prev({ buffer = 0 })<cr>", "Goto Previous Error")
@@ -155,7 +130,10 @@ require("lazy").setup({
 			{
 				"<leader>f",
 				function()
-					require("conform").format({ async = true, lsp_format = "fallback" })
+					require("conform").format({
+						async = true,
+						lsp_format = "fallback",
+					})
 				end,
 				mode = "",
 				desc = "Format Buffer",
@@ -165,6 +143,11 @@ require("lazy").setup({
 			notify_on_error = false,
 			formatters_by_ft = {
 				lua = { "stylua" },
+			},
+			format_on_save = {
+				async = true,
+				timeout_ms = 500,
+				lsp_format = "fallback",
 			},
 		},
 	},
@@ -253,14 +236,6 @@ require("lazy").setup({
 	"nvim-treesitter/nvim-treesitter-textobjects",
 	{
 		"lewis6991/gitsigns.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-	},
-	{
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
 	},
 	{
 		"ionide/ionide-vim",

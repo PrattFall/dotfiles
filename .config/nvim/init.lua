@@ -52,5 +52,5 @@ require('packages')
 require('gitsigns_config')
 require('terminal_toggle')
 
-map('n', '<Leader>sf', ':Telescope find_files<cr>')
-map('n', '<Leader>sg', ':Telescope live_grep<cr>')
+map('n', '<Leader>sf', ':FzfLua files<cr>')
+map('n', '<Leader>sg', ':FzfLua live_grep<cr>')
