@@ -53,11 +53,7 @@ require("lazy").setup({
 
 					map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
 					map("gra", vim.lsp.buf.code_action, "Go to code Action", { "n", "x" })
-					-- map("grr", require("telescope.builtin").lsp_references, "Goto References")
-					-- map("gri", require("telescope.builtin").lsp_implementations, "Goto Implementation")
-					-- map("grd", require("telescope.builtin").lsp_definitions, "Goto Definition")
 					map("grD", vim.lsp.buf.declaration, "Goto Declaration")
-					-- map("grt", require("telescope.builtin").lsp_type_definitions, "Type Definition")
 					map("<leader>h", vim.lsp.buf.hover, "Force Hover")
 					map("<leader><CR>", vim.diagnostic.open_float, "Diagnostic Info")
 					map("<leader>[", "<cmd>lua vim.diagnostic.get_prev({ buffer = 0 })<cr>", "Goto Previous Error")
@@ -144,8 +140,7 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 			},
-			format_on_save = {
-				async = true,
+			format_after_save = {
 				timeout_ms = 500,
 				lsp_format = "fallback",
 			},
@@ -202,38 +197,6 @@ require("lazy").setup({
 			signature = { enabled = true },
 		},
 	},
-	{
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-		lazy = false,
-	},
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"c",
-					"c_sharp",
-					"lua",
-					"rust",
-					"typescript",
-					"javascript",
-					"css",
-					"ocaml",
-				},
-				highlight = { enable = true },
-				rainbow = { enable = false },
-				modules = {},
-				sync_install = false,
-				ignore_install = {},
-				auto_install = true,
-			})
-		end,
-	},
-	"nvim-treesitter/nvim-treesitter-textobjects",
 	{
 		"lewis6991/gitsigns.nvim",
 	},
